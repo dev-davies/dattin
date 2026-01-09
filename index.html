@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
     <style>
       :root {
         --green-900: #14532d;
@@ -660,8 +662,7 @@
           countdownBeep() { this.playTone(600, 0.1, 'sine'); },
           goBeep() { this.playTone(800, 0.3, 'square'); },
           timeUpBuzz() { 
-              this.playTone(150, 0.5, 'sawtooth'); 
-              setTimeout(() => this.playTone(100, 0.5, 'sawtooth'), 400); 
+              this.playTone(80, 1.0, 'sawtooth'); 
           }
         };
 
@@ -872,6 +873,15 @@
         renderScreen();
         animateElement(document.querySelector('#welcome-screen > .title-screen'), 'fadeIn', 800);
       });
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker registered!', reg))
+            .catch(err => console.log('Service Worker registration failed:', err));
+        });
+      }
     </script>
   </body>
 </html>

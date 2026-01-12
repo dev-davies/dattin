@@ -347,10 +347,14 @@ const toggleDeck = (element) => {
     if (selectedDecks.has(deck)) return;
 
     selectedDecks.clear();
-    buttons.deckOptions.forEach(btn => btn.classList.remove('selected'));
+    buttons.deckOptions.forEach(btn => {
+        btn.classList.remove('selected');
+        btn.classList.add('green'); // Add green class to unselected
+    });
     
     selectedDecks.add(deck);
     element.classList.add('selected');
+    element.classList.remove('green'); // Remove green class from selected
 };
 
 const handleCorrect = () => { 

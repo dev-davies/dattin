@@ -254,6 +254,14 @@ main {
 .deck-option:hover {
   transform: translateY(-2px);
 }
+.deck-option.green {
+  background-color: var(--green-900);
+  color: var(--white);
+  border-color: var(--green-800);
+}
+.deck-option.green:hover {
+  background-color: var(--green-800);
+}
 .timer-btn.selected {
   background-color: var(--yellow-400) !important;
   border-color: var(--yellow-400) !important;

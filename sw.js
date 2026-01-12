@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dat-tin-v1';
+const CACHE_NAME = 'dat-tin-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

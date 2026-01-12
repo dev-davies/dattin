@@ -344,15 +344,13 @@ const showTeamSelection = () => {
 
 const toggleDeck = (element) => {
     const deck = element.dataset.deck;
-    if (selectedDecks.has(deck)) {
-        if (selectedDecks.size > 1) { // Prevent deselecting the last deck
-            selectedDecks.delete(deck);
-            element.classList.remove('selected');
-        }
-    } else {
-        selectedDecks.add(deck);
-        element.classList.add('selected');
-    }
+    if (selectedDecks.has(deck)) return;
+
+    selectedDecks.clear();
+    buttons.deckOptions.forEach(btn => btn.classList.remove('selected'));
+    
+    selectedDecks.add(deck);
+    element.classList.add('selected');
 };
 
 const handleCorrect = () => { 

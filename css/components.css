@@ -1,0 +1,713 @@
+/* ===================================
+   Button Components
+   =================================== */
+.btn {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateZ(0);
+  transition: all 0.15s ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-primary {
+  background-color: var(--yellow-400);
+  color: var(--green-900);
+}
+
+.btn-primary:hover {
+  background-color: var(--yellow-300);
+}
+
+.btn-pass {
+  background-color: var(--red-700);
+  color: var(--white);
+}
+
+.btn-pass:hover {
+  background-color: var(--red-600);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--yellow-400);
+  border: 2px solid var(--yellow-400);
+}
+
+.btn-secondary:hover {
+  background-color: var(--yellow-400);
+  color: var(--green-900);
+}
+
+.btn-skip {
+  background-color: var(--gray-300);
+  color: var(--green-900);
+  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-skip:hover {
+  background-color: var(--white);
+  transform: scale(1.05);
+}
+
+.btn-skip:active {
+  transform: scale(0.95);
+}
+
+.btn-quit {
+  background-color: var(--red-700);
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  font-weight: 600;
+}
+
+.btn-quit:hover {
+  background-color: var(--red-600);
+  transform: scale(1.05);
+}
+
+.btn-quit:active {
+  transform: scale(0.95);
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ===================================
+   Title Screen Components
+   =================================== */
+.title-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.title-screen h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: var(--yellow-400);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.rules,
+.team-setup-box {
+  background-color: var(--green-800);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  width: 100%;
+  max-width: 24rem;
+}
+
+.rules h2,
+.team-setup-box h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--yellow-300);
+  margin-top: 0;
+  text-align: center;
+}
+
+.rules p {
+  font-size: 1rem;
+  color: var(--gray-200);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.rules ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.rules li {
+  margin-bottom: 0.5rem;
+  color: var(--gray-200);
+}
+
+/* ===================================
+   Instructions Box
+   =================================== */
+.instructions-box {
+  background-color: var(--green-800);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.instructions-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--yellow-400);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.instructions-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.instruction-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.instruction-icon {
+  font-size: 1.5rem;
+  min-width: 2rem;
+}
+
+.instruction-text {
+  font-size: 1rem;
+  color: var(--gray-200);
+  line-height: 1.5;
+}
+
+.btn-play-now {
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ===================================
+   Team Count Selector
+   =================================== */
+.team-count-selector {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.team-count-btn {
+  flex-grow: 1;
+  background-color: var(--yellow-400);
+  color: var(--green-900);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.team-count-btn:hover {
+  background-color: var(--yellow-300);
+  transform: translateY(-2px);
+}
+
+.team-count-btn:active {
+  transform: scale(0.95) translateY(0);
+}
+
+/* ===================================
+   Deck Selector
+   =================================== */
+.deck-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.deck-option {
+  background-color: var(--green-900);
+  border: 2px solid var(--gray-300);
+  color: var(--gray-300);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deck-option.selected {
+  background-color: var(--yellow-400);
+  border-color: var(--yellow-400);
+  color: var(--green-900);
+}
+
+.deck-option:hover {
+  transform: translateY(-2px);
+}
+
+.timer-btn.selected {
+  background-color: var(--yellow-400) !important;
+  border-color: var(--yellow-400) !important;
+  color: var(--green-900) !important;
+}
+
+/* ===================================
+   Game Card
+   =================================== */
+.card-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-card {
+  background-color: var(--white);
+  color: var(--gray-800);
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.card-section {
+  text-align: center;
+}
+
+.card-section.target {
+  border-bottom: 2px solid var(--gray-200);
+  padding-bottom: 1rem;
+}
+
+.card-section.forbidden {
+  margin-top: 1rem;
+}
+
+.card-section .label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.card-section.target .label {
+  color: #15803d;
+}
+
+.card-section.forbidden .label {
+  color: #b91c1c;
+}
+
+.target-word {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-top: 0.25rem;
+}
+
+.forbidden-words-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.forbidden-word {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #991b1b;
+}
+
+/* ===================================
+   Game Header & Footer
+   =================================== */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(22, 101, 52, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.score-display {
+  position: relative;
+}
+
+.score-display .label {
+  font-size: 1.125rem;
+  color: var(--gray-300);
+}
+
+.score-display .value {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  color: var(--white);
+}
+
+.timer {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--yellow-400);
+}
+
+.timer.low-time {
+  color: var(--red-500);
+  animation: pulse 1s infinite;
+}
+
+.game-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#current-team-indicator {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+/* ===================================
+   Scoreboard
+   =================================== */
+.scoreboard {
+  width: 100%;
+  max-width: 24rem;
+  background-color: var(--green-800);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scoreboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--white);
+}
+
+.scoreboard-item .team-score {
+  font-weight: 700;
+  color: var(--yellow-400);
+}
+
+/* ===================================
+   Winner Display
+   =================================== */
+.winner-display {
+  background: linear-gradient(135deg, var(--yellow-400), var(--yellow-300));
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.winner-banner {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-900);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.winner-team {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--green-900);
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trophy {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+/* ===================================
+   Final Winner Display
+   =================================== */
+.final-winner-display {
+  background: linear-gradient(135deg, var(--yellow-400), var(--yellow-300));
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.final-trophy {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.victory-message {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.final-winner-team {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--green-900);
+  margin: 1rem 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.final-score {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--green-800);
+  margin-top: 0.5rem;
+}
+
+/* ===================================
+   Confetti Animation Elements
+   =================================== */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--red-500);
+  animation: confetti-fall 3s linear infinite;
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  background-color: var(--red-500);
+}
+
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-delay: 0.2s;
+  background-color: var(--yellow-400);
+}
+
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-delay: 0.4s;
+  background-color: var(--green-800);
+}
+
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-delay: 0.6s;
+  background-color: var(--team1-color);
+}
+
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-delay: 0.8s;
+  background-color: var(--team2-color);
+}
+
+.confetti:nth-child(6) {
+  left: 60%;
+  animation-delay: 1s;
+  background-color: var(--team3-color);
+}
+
+.confetti:nth-child(7) {
+  left: 70%;
+  animation-delay: 1.2s;
+  background-color: var(--team4-color);
+}
+
+.confetti:nth-child(8) {
+  left: 80%;
+  animation-delay: 1.4s;
+  background-color: var(--red-500);
+}
+
+.confetti:nth-child(9) {
+  left: 90%;
+  animation-delay: 1.6s;
+  background-color: var(--yellow-400);
+}
+
+/* ===================================
+   Sound Button
+   =================================== */
+.sound-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--white);
+}
+
+.sound-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+/* ===================================
+   Install Prompt
+   =================================== */
+.install-prompt {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, var(--green-900), var(--green-800));
+  padding: 1.5rem;
+  border-top: 2px solid var(--yellow-400);
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.install-prompt.visible {
+  transform: translateY(0);
+}
+
+.install-content p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+
+.install-actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-install {
+  background-color: var(--yellow-400);
+  color: var(--green-900);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 1;
+  max-width: 10rem;
+}
+
+.btn-close-install {
+  background-color: transparent;
+  color: var(--gray-300);
+  border: 2px solid var(--gray-300);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 1;
+  max-width: 10rem;
+}
+
+/* ===================================
+   Review Screen
+   =================================== */
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.review-word {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.status-btn {
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 5rem;
+}
+
+.status-btn.correct {
+  background-color: var(--yellow-400);
+  color: var(--green-900);
+}
+
+.status-btn.pass {
+  background-color: var(--red-600);
+  color: var(--white);
+}

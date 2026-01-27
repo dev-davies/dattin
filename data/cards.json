@@ -1,0 +1,2990 @@
+{
+  "naija": [
+    {
+      "targetWord": "Jollof Rice",
+      "forbiddenWords": [
+        "Party",
+        "Tomato",
+        "Orange"
+      ]
+    },
+    {
+      "targetWord": "Nollywood",
+      "forbiddenWords": [
+        "Movie",
+        "Film",
+        "Actor"
+      ]
+    },
+    {
+      "targetWord": "Lagos",
+      "forbiddenWords": [
+        "Traffic",
+        "City",
+        "Eko"
+      ]
+    },
+    {
+      "targetWord": "Fela Kuti",
+      "forbiddenWords": [
+        "Music",
+        "Afrobeat",
+        "Saxophone"
+      ]
+    },
+    {
+      "targetWord": "Suya",
+      "forbiddenWords": [
+        "Meat",
+        "Skewer",
+        "Spice"
+      ]
+    },
+    {
+      "targetWord": "Agbada",
+      "forbiddenWords": [
+        "Buba",
+        "Sokoto",
+        "Grand"
+      ]
+    },
+    {
+      "targetWord": "Harmattan",
+      "forbiddenWords": [
+        "Dry",
+        "Season",
+        "Dust"
+      ]
+    },
+    {
+      "targetWord": "Okada",
+      "forbiddenWords": [
+        "Motorcycle",
+        "Bike",
+        "Transport"
+      ]
+    },
+    {
+      "targetWord": "Puff Puff",
+      "forbiddenWords": [
+        "Dough",
+        "Snack",
+        "Fried"
+      ]
+    },
+    {
+      "targetWord": "Chin Chin",
+      "forbiddenWords": [
+        "Snack",
+        "Hard",
+        "Flour"
+      ]
+    },
+    {
+      "targetWord": "Eba",
+      "forbiddenWords": [
+        "Garri",
+        "Swallow",
+        "Soup"
+      ]
+    },
+    {
+      "targetWord": "Pounded Yam",
+      "forbiddenWords": [
+        "Iyan",
+        "Mortar",
+        "Tuber"
+      ]
+    },
+    {
+      "targetWord": "Davido",
+      "forbiddenWords": [
+        "OBO",
+        "Music",
+        "30BG"
+      ]
+    },
+    {
+      "targetWord": "Wizkid",
+      "forbiddenWords": [
+        "Starboy",
+        "Music",
+        "Ojuelegba"
+      ]
+    },
+    {
+      "targetWord": "Burna Boy",
+      "forbiddenWords": [
+        "African Giant",
+        "Odogwu",
+        "Grammy"
+      ]
+    },
+    {
+      "targetWord": "Super Eagles",
+      "forbiddenWords": [
+        "Football",
+        "Team",
+        "Green"
+      ]
+    },
+    {
+      "targetWord": "Wole Soyinka",
+      "forbiddenWords": [
+        "Nobel",
+        "Author",
+        "Playwright"
+      ]
+    },
+    {
+      "targetWord": "Chimamanda Adichie",
+      "forbiddenWords": [
+        "Author",
+        "Feminist",
+        "Writer"
+      ]
+    },
+    {
+      "targetWord": "Danfo",
+      "forbiddenWords": [
+        "Bus",
+        "Yellow",
+        "Conductor"
+      ]
+    },
+    {
+      "targetWord": "Pidgin English",
+      "forbiddenWords": [
+        "Language",
+        "Broken",
+        "Speak"
+      ]
+    },
+    {
+      "targetWord": "Aso Rock",
+      "forbiddenWords": [
+        "President",
+        "Abuja",
+        "Villa"
+      ]
+    },
+    {
+      "targetWord": "Zuma Rock",
+      "forbiddenWords": [
+        "Abuja",
+        "Face",
+        "Monolith"
+      ]
+    },
+    {
+      "targetWord": "Gele",
+      "forbiddenWords": [
+        "Head-tie",
+        "Fabric",
+        "Women"
+      ]
+    },
+    {
+      "targetWord": "Owambe",
+      "forbiddenWords": [
+        "Party",
+        "Celebration",
+        "Spray"
+      ]
+    },
+    {
+      "targetWord": "Boli",
+      "forbiddenWords": [
+        "Plantain",
+        "Roasted",
+        "Fish"
+      ]
+    },
+    {
+      "targetWord": "Akara",
+      "forbiddenWords": [
+        "Beans",
+        "Cake",
+        "Fried"
+      ]
+    },
+    {
+      "targetWord": "Moi Moi",
+      "forbiddenWords": [
+        "Beans",
+        "Pudding",
+        "Steamed"
+      ]
+    },
+    {
+      "targetWord": "Egusi",
+      "forbiddenWords": [
+        "Soup",
+        "Melon",
+        "Seed"
+      ]
+    },
+    {
+      "targetWord": "Keke Napep",
+      "forbiddenWords": [
+        "Tricycle",
+        "Yellow",
+        "Transport"
+      ]
+    },
+    {
+      "targetWord": "Shea Butter",
+      "forbiddenWords": [
+        "Ori",
+        "Cream",
+        "Skin"
+      ]
+    },
+    {
+      "targetWord": "Palm Wine",
+      "forbiddenWords": [
+        "Drink",
+        "Tree",
+        "Tapper"
+      ]
+    },
+    {
+      "targetWord": "Ankara",
+      "forbiddenWords": [
+        "Fabric",
+        "Wax",
+        "Print"
+      ]
+    },
+    {
+      "targetWord": "Talking Drum",
+      "forbiddenWords": [
+        "Gangan",
+        "Instrument",
+        "Yoruba"
+      ]
+    },
+    {
+      "targetWord": "NEPA",
+      "forbiddenWords": [
+        "Light",
+        "Power",
+        "Blackout"
+      ]
+    },
+    {
+      "targetWord": "Go-slow",
+      "forbiddenWords": [
+        "Traffic",
+        "Jam",
+        "Hold-up"
+      ]
+    },
+    {
+      "targetWord": "Oga",
+      "forbiddenWords": [
+        "Boss",
+        "Master",
+        "Chief"
+      ]
+    },
+    {
+      "targetWord": "Wahala",
+      "forbiddenWords": [
+        "Trouble",
+        "Problem",
+        "Stress"
+      ]
+    },
+    {
+      "targetWord": "Sisi",
+      "forbiddenWords": [
+        "Girl",
+        "Lady",
+        "Young"
+      ]
+    },
+    {
+      "targetWord": "Buka",
+      "forbiddenWords": [
+        "Restaurant",
+        "Food",
+        "Local"
+      ]
+    },
+    {
+      "targetWord": "Garri",
+      "forbiddenWords": [
+        "Cassava",
+        "Flakes",
+        "Drink"
+      ]
+    },
+    {
+      "targetWord": "Iro and Buba",
+      "forbiddenWords": [
+        "Wrapper",
+        "Blouse",
+        "Yoruba"
+      ]
+    },
+    {
+      "targetWord": "Shaku Shaku",
+      "forbiddenWords": [
+        "Dance",
+        "Legwork",
+        "Zanku"
+      ]
+    },
+    {
+      "targetWord": "Aliko Dangote",
+      "forbiddenWords": [
+        "Richest",
+        "Man",
+        "Cement"
+      ]
+    },
+    {
+      "targetWord": "Nkwobi",
+      "forbiddenWords": [
+        "Cowleg",
+        "Spicy",
+        "Igbo"
+      ]
+    },
+    {
+      "targetWord": "Abacha",
+      "forbiddenWords": [
+        "African Salad",
+        "Cassava",
+        "Ugba"
+      ]
+    },
+    {
+      "targetWord": "Zobo",
+      "forbiddenWords": [
+        "Drink",
+        "Red",
+        "Hibiscus"
+      ]
+    },
+    {
+      "targetWord": "Tiwa Savage",
+      "forbiddenWords": [
+        "Queen",
+        "Afrobeats",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Yemi Alade",
+      "forbiddenWords": [
+        "Mama Africa",
+        "Johnny",
+        "Female"
+      ]
+    },
+    {
+      "targetWord": "Olumo Rock",
+      "forbiddenWords": [
+        "Abeokuta",
+        "Mountain",
+        "Egba"
+      ]
+    },
+    {
+      "targetWord": "Afrobeats",
+      "forbiddenWords": [
+        "Music",
+        "Genre",
+        "Fela"
+      ]
+    },
+    {
+      "targetWord": "IJGB",
+      "forbiddenWords": [
+        "Abroad",
+        "Returnee",
+        "Diaspora"
+      ]
+    },
+    {
+      "targetWord": "Detty December",
+      "forbiddenWords": [
+        "Party",
+        "December",
+        "Lagos"
+      ]
+    },
+    {
+      "targetWord": "Nepo Baby",
+      "forbiddenWords": [
+        "Privilege",
+        "Parents",
+        "Famous"
+      ]
+    },
+    {
+      "targetWord": "Lapo Baby",
+      "forbiddenWords": [
+        "Lekki",
+        "Rich",
+        "Spoiled"
+      ]
+    },
+    {
+      "targetWord": "Rema",
+      "forbiddenWords": [
+        "Calm Down",
+        "Mavin",
+        "Benin"
+      ]
+    },
+    {
+      "targetWord": "Asake",
+      "forbiddenWords": [
+        "Mr Money",
+        "YBNL",
+        "Olamide"
+      ]
+    },
+    {
+      "targetWord": "Tems",
+      "forbiddenWords": [
+        "Essence",
+        "Grammy",
+        "Female"
+      ]
+    },
+    {
+      "targetWord": "Olamide",
+      "forbiddenWords": [
+        "YBNL",
+        "Baddo",
+        "Indigenous"
+      ]
+    },
+    {
+      "targetWord": "Ayra Starr",
+      "forbiddenWords": [
+        "Rush",
+        "Mavin",
+        "Young"
+      ]
+    },
+    {
+      "targetWord": "Fireboy DML",
+      "forbiddenWords": [
+        "Peru",
+        "YBNL",
+        "Jealous"
+      ]
+    },
+    {
+      "targetWord": "Omah Lay",
+      "forbiddenWords": [
+        "Godly",
+        "Port Harcourt",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Simi",
+      "forbiddenWords": [
+        "Duduke",
+        "Adekunle",
+        "Voice"
+      ]
+    },
+    {
+      "targetWord": "Adekunle Gold",
+      "forbiddenWords": [
+        "Orente",
+        "Simi",
+        "Highlife"
+      ]
+    },
+    {
+      "targetWord": "Falz",
+      "forbiddenWords": [
+        "Lawyer",
+        "Funny",
+        "Bop Daddy"
+      ]
+    },
+    {
+      "targetWord": "Mr Eazi",
+      "forbiddenWords": [
+        "Leg Over",
+        "Banku",
+        "Temi"
+      ]
+    },
+    {
+      "targetWord": "Tekno",
+      "forbiddenWords": [
+        "Pana",
+        "Skeletun",
+        "Producer"
+      ]
+    },
+    {
+      "targetWord": "Kizz Daniel",
+      "forbiddenWords": [
+        "Buga",
+        "Woju",
+        "Cough"
+      ]
+    },
+    {
+      "targetWord": "Seyi Vibez",
+      "forbiddenWords": [
+        "Street",
+        "Singer",
+        "Fuji"
+      ]
+    },
+    {
+      "targetWord": "Zinoleesky",
+      "forbiddenWords": [
+        "Marlian",
+        "Naira",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Mohbad",
+      "forbiddenWords": [
+        "Marlian",
+        "Singer",
+        "Late"
+      ]
+    },
+    {
+      "targetWord": "Naira Marley",
+      "forbiddenWords": [
+        "Marlian",
+        "Soapy",
+        "Controversy"
+      ]
+    },
+    {
+      "targetWord": "Zlatan",
+      "forbiddenWords": [
+        "Zanku",
+        "Rapper",
+        "Legwork"
+      ]
+    },
+    {
+      "targetWord": "Bella Shmurda",
+      "forbiddenWords": [
+        "Cash App",
+        "Singer",
+        "Street"
+      ]
+    },
+    {
+      "targetWord": "Ruger",
+      "forbiddenWords": [
+        "Bounce",
+        "Eyepatch",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "BNXN",
+      "forbiddenWords": [
+        "Buju",
+        "Finesse",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Victony",
+      "forbiddenWords": [
+        "Wheelchair",
+        "Singer",
+        "Soweto"
+      ]
+    },
+    {
+      "targetWord": "Joeboy",
+      "forbiddenWords": [
+        "Baby",
+        "emPawa",
+        "Alcohol"
+      ]
+    },
+    {
+      "targetWord": "Oxlade",
+      "forbiddenWords": [
+        "Away",
+        "Singer",
+        "KU LO SA"
+      ]
+    },
+    {
+      "targetWord": "DJ Cuppy",
+      "forbiddenWords": [
+        "Pink",
+        "Otedola",
+        "DJ"
+      ]
+    },
+    {
+      "targetWord": "Mayorkun",
+      "forbiddenWords": [
+        "Mayor",
+        "Of Lagos",
+        "Geng"
+      ]
+    },
+    {
+      "targetWord": "Peruzzi",
+      "forbiddenWords": [
+        "Majesty",
+        "DMW",
+        "Songwriter"
+      ]
+    },
+    {
+      "targetWord": "Blaqbonez",
+      "forbiddenWords": [
+        "Sex Over Love",
+        "Rapper",
+        "Chocolate City"
+      ]
+    },
+    {
+      "targetWord": "Vector",
+      "forbiddenWords": [
+        "Viper",
+        "Rapper",
+        "Lafiaji"
+      ]
+    },
+    {
+      "targetWord": "MI Abaga",
+      "forbiddenWords": [
+        "Chocolate City",
+        "Rapper",
+        "Chairman"
+      ]
+    },
+    {
+      "targetWord": "Ice Prince",
+      "forbiddenWords": [
+        "Oleku",
+        "Rapper",
+        "Jos"
+      ]
+    },
+    {
+      "targetWord": "Jesse Jagz",
+      "forbiddenWords": [
+        "Chocolate City",
+        "Rapper",
+        "Jos"
+      ]
+    },
+    {
+      "targetWord": "Ycee",
+      "forbiddenWords": [
+        "Juice",
+        "Rapper",
+        "Tinny"
+      ]
+    },
+    {
+      "targetWord": "Phyno",
+      "forbiddenWords": [
+        "Igbo",
+        "Rapper",
+        "Enugu"
+      ]
+    },
+    {
+      "targetWord": "Flavour",
+      "forbiddenWords": [
+        "Highlife",
+        "Nwa Baby",
+        "Enugu"
+      ]
+    },
+    {
+      "targetWord": "Patoranking",
+      "forbiddenWords": [
+        "Reggae",
+        "Dancehall",
+        "Alubarika"
+      ]
+    },
+    {
+      "targetWord": "Timaya",
+      "forbiddenWords": [
+        "Dem Mama",
+        "Plantain",
+        "Bayelsa"
+      ]
+    },
+    {
+      "targetWord": "2Baba",
+      "forbiddenWords": [
+        "African Queen",
+        "Legend",
+        "Plantashun"
+      ]
+    },
+    {
+      "targetWord": "Don Jazzy",
+      "forbiddenWords": [
+        "Mavin",
+        "Producer",
+        "Mohits"
+      ]
+    },
+    {
+      "targetWord": "ID Cabasa",
+      "forbiddenWords": [
+        "Producer",
+        "Coded Tunes",
+        "Olamide"
+      ]
+    },
+    {
+      "targetWord": "Sarz",
+      "forbiddenWords": [
+        "Beat",
+        "Producer",
+        "Paigon"
+      ]
+    },
+    {
+      "targetWord": "Pheelz",
+      "forbiddenWords": [
+        "Producer",
+        "Finesse",
+        "BNXN"
+      ]
+    },
+    {
+      "targetWord": "Young Jonn",
+      "forbiddenWords": [
+        "Producer",
+        "Dada",
+        "Chocolate City"
+      ]
+    },
+    {
+      "targetWord": "Rexxie",
+      "forbiddenWords": [
+        "Producer",
+        "Grammy",
+        "KPK"
+      ]
+    },
+    {
+      "targetWord": "P-Square",
+      "forbiddenWords": [
+        "Twins",
+        "Peter",
+        "Paul"
+      ]
+    },
+    {
+      "targetWord": "Psquare",
+      "forbiddenWords": [
+        "Personally",
+        "Twins",
+        "Breakup"
+      ]
+    },
+    {
+      "targetWord": "D'banj",
+      "forbiddenWords": [
+        "Kokomaster",
+        "Oliver Twist",
+        "Harmonica"
+      ]
+    },
+    {
+      "targetWord": "Banky W",
+      "forbiddenWords": [
+        "EME",
+        "Yes/No",
+        "Actor"
+      ]
+    },
+    {
+      "targetWord": "Wande Coal",
+      "forbiddenWords": [
+        "Bumper",
+        "Mushin",
+        "2 Match"
+      ]
+    },
+    {
+      "targetWord": "Skales",
+      "forbiddenWords": [
+        "Shake Body",
+        "EME",
+        "Rapper"
+      ]
+    },
+    {
+      "targetWord": "9ice",
+      "forbiddenWords": [
+        "Gongo Aso",
+        "Ancestor",
+        "Ogara"
+      ]
+    },
+    {
+      "targetWord": "Ruggedman",
+      "forbiddenWords": [
+        "Ruggedy",
+        "Baba",
+        "Rapper"
+      ]
+    },
+    {
+      "targetWord": "Eedris Abdulkareem",
+      "forbiddenWords": [
+        "Jaga Jaga",
+        "Rapper",
+        "50 Cent"
+      ]
+    },
+    {
+      "targetWord": "Tony Tetuila",
+      "forbiddenWords": [
+        "My Car",
+        "Remedies",
+        "Ondo"
+      ]
+    },
+    {
+      "targetWord": "Plantashun Boiz",
+      "forbiddenWords": [
+        "2Baba",
+        "Blackface",
+        "Faze"
+      ]
+    },
+    {
+      "targetWord": "Styl-Plus",
+      "forbiddenWords": [
+        "Olufunmi",
+        "Group",
+        "Runaway"
+      ]
+    },
+    {
+      "targetWord": "Bracket",
+      "forbiddenWords": [
+        "Yori Yori",
+        "Duo",
+        "Group"
+      ]
+    },
+    {
+      "targetWord": "PJ Morton",
+      "forbiddenWords": [
+        "Maroon 5",
+        "America",
+        "Lagos"
+      ]
+    },
+    {
+      "targetWord": "Bez",
+      "forbiddenWords": [
+        "That Stupid Song",
+        "Alternative",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Johnny Drille",
+      "forbiddenWords": [
+        "Mavin",
+        "Guitar",
+        "Folk"
+      ]
+    },
+    {
+      "targetWord": "Chike",
+      "forbiddenWords": [
+        "Running",
+        "Voice",
+        "Project Fame"
+      ]
+    },
+    {
+      "targetWord": "Ladipoe",
+      "forbiddenWords": [
+        "Mavin",
+        "Rapper",
+        "Feeling"
+      ]
+    },
+    {
+      "targetWord": "A-Q",
+      "forbiddenWords": [
+        "Rapper",
+        "Chocolate City",
+        "MI"
+      ]
+    },
+    {
+      "targetWord": "Ckay",
+      "forbiddenWords": [
+        "Love Nwantiti",
+        "Producer",
+        "Chocolate City"
+      ]
+    },
+    {
+      "targetWord": "Crayon",
+      "forbiddenWords": [
+        "Mavin",
+        "Ijo",
+        "Young"
+      ]
+    },
+    {
+      "targetWord": "Bayanni",
+      "forbiddenWords": [
+        "Mavin",
+        "Ta Ta Ta",
+        "Young"
+      ]
+    },
+    {
+      "targetWord": "Magixx",
+      "forbiddenWords": [
+        "Mavin",
+        "Love",
+        "Young"
+      ]
+    },
+    {
+      "targetWord": "Boy Spyce",
+      "forbiddenWords": [
+        "Mavin",
+        "Innocent",
+        "Young"
+      ]
+    },
+    {
+      "targetWord": "Shallipopi",
+      "forbiddenWords": [
+        "Plutomania",
+        "Benin",
+        "Elon Musk"
+      ]
+    },
+    {
+      "targetWord": "Portable",
+      "forbiddenWords": [
+        "Zazoo",
+        "Ika",
+        "Controversial"
+      ]
+    },
+    {
+      "targetWord": "Poco Lee",
+      "forbiddenWords": [
+        "Dancer",
+        "Hype",
+        "Zlatan"
+      ]
+    },
+    {
+      "targetWord": "Kaffy",
+      "forbiddenWords": [
+        "Dancer",
+        "Choreographer",
+        "Guinness"
+      ]
+    },
+    {
+      "targetWord": "Shank Comics",
+      "forbiddenWords": [
+        "Instagram",
+        "Comedian",
+        "Character"
+      ]
+    },
+    {
+      "targetWord": "Mr Macaroni",
+      "forbiddenWords": [
+        "Freaky",
+        "Twitter",
+        "Comedian"
+      ]
+    },
+    {
+      "targetWord": "Sabinus",
+      "forbiddenWords": [
+        "Something Hooge",
+        "Mr Funny",
+        "Comedian"
+      ]
+    },
+    {
+      "targetWord": "Broda Shaggi",
+      "forbiddenWords": [
+        "Comedian",
+        "Mushin",
+        "Character"
+      ]
+    },
+    {
+      "targetWord": "Sydney Talker",
+      "forbiddenWords": [
+        "Comedian",
+        "Towel",
+        "Village"
+      ]
+    },
+    {
+      "targetWord": "Mark Angel",
+      "forbiddenWords": [
+        "Comedy",
+        "Success",
+        "Emmanuella"
+      ]
+    },
+    {
+      "targetWord": "Emmanuella",
+      "forbiddenWords": [
+        "Child",
+        "Comedian",
+        "This is not my real face"
+      ]
+    },
+    {
+      "targetWord": "Taaooma",
+      "forbiddenWords": [
+        "Comedian",
+        "Mother",
+        "Characters"
+      ]
+    },
+    {
+      "targetWord": "Lasisi Elenu",
+      "forbiddenWords": [
+        "Snap",
+        "Filter",
+        "Comedian"
+      ]
+    },
+    {
+      "targetWord": "Officer Woos",
+      "forbiddenWords": [
+        "Police",
+        "Comedy",
+        "Character"
+      ]
+    },
+    {
+      "targetWord": "Tunde Ednut",
+      "forbiddenWords": [
+        "Instagram",
+        "Blogger",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Linda Ikeji",
+      "forbiddenWords": [
+        "Blog",
+        "Gossip",
+        "Blogger"
+      ]
+    },
+    {
+      "targetWord": "Noble Igwe",
+      "forbiddenWords": [
+        "Media",
+        "Influencer",
+        "360Nobs"
+      ]
+    },
+    {
+      "targetWord": "Ebuka",
+      "forbiddenWords": [
+        "BBNaija",
+        "Host",
+        "Agbada"
+      ]
+    },
+    {
+      "targetWord": "Laycon",
+      "forbiddenWords": [
+        "BBNaija",
+        "Rapper",
+        "Winner"
+      ]
+    },
+    {
+      "targetWord": "Mercy Eke",
+      "forbiddenWords": [
+        "BBNaija",
+        "Pepper Dem",
+        "Winner"
+      ]
+    },
+    {
+      "targetWord": "Phyna",
+      "forbiddenWords": [
+        "BBNaija",
+        "Winner",
+        "Level Up"
+      ]
+    },
+    {
+      "targetWord": "Ilebaye",
+      "forbiddenWords": [
+        "BBNaija",
+        "Gen Z",
+        "All Stars"
+      ]
+    },
+    {
+      "targetWord": "Whitemoney",
+      "forbiddenWords": [
+        "BBNaija",
+        "Cook",
+        "Selense"
+      ]
+    },
+    {
+      "targetWord": "Pere",
+      "forbiddenWords": [
+        "BBNaija",
+        "Military",
+        "General"
+      ]
+    },
+    {
+      "targetWord": "Cross",
+      "forbiddenWords": [
+        "BBNaija",
+        "Fitness",
+        "Body"
+      ]
+    },
+    {
+      "targetWord": "BBNaija",
+      "forbiddenWords": [
+        "Reality",
+        "Show",
+        "House"
+      ]
+    },
+    {
+      "targetWord": "Gulder Ultimate Search",
+      "forbiddenWords": [
+        "Reality",
+        "Show",
+        "Jungle"
+      ]
+    },
+    {
+      "targetWord": "The Johnsons",
+      "forbiddenWords": [
+        "Series",
+        "TV",
+        "Family"
+      ]
+    },
+    {
+      "targetWord": "Jenifa's Diary",
+      "forbiddenWords": [
+        "Funke",
+        "Series",
+        "Comedy"
+      ]
+    },
+    {
+      "targetWord": "Funke Akindele",
+      "forbiddenWords": [
+        "Jenifa",
+        "Actress",
+        "Box Office"
+      ]
+    },
+    {
+      "targetWord": "Genevieve Nnaji",
+      "forbiddenWords": [
+        "Actress",
+        "Lionheart",
+        "Beautiful"
+      ]
+    },
+    {
+      "targetWord": "Ramsey Nouah",
+      "forbiddenWords": [
+        "Actor",
+        "Lover Boy",
+        "Handsome"
+      ]
+    },
+    {
+      "targetWord": "RMD",
+      "forbiddenWords": [
+        "Richard Mofe-Damijo",
+        "Actor",
+        "Ageless"
+      ]
+    },
+    {
+      "targetWord": "Omotola Jalade",
+      "forbiddenWords": [
+        "Actress",
+        "Omosexy",
+        "Beautiful"
+      ]
+    },
+    {
+      "targetWord": "Jim Iyke",
+      "forbiddenWords": [
+        "Actor",
+        "Bad Boy",
+        "Nollywood"
+      ]
+    },
+    {
+      "targetWord": "Mercy Johnson",
+      "forbiddenWords": [
+        "Actress",
+        "Comedy",
+        "Cry"
+      ]
+    },
+    {
+      "targetWord": "Rita Dominic",
+      "forbiddenWords": [
+        "Actress",
+        "Beautiful",
+        "Nollywood"
+      ]
+    },
+    {
+      "targetWord": "Ini Edo",
+      "forbiddenWords": [
+        "Actress",
+        "Beautiful",
+        "Nollywood"
+      ]
+    },
+    {
+      "targetWord": "Kate Henshaw",
+      "forbiddenWords": [
+        "Actress",
+        "Fitness",
+        "Ageless"
+      ]
+    },
+    {
+      "targetWord": "Sola Sobowale",
+      "forbiddenWords": [
+        "King of Boys",
+        "Toyin Tomato",
+        "Actress"
+      ]
+    },
+    {
+      "targetWord": "King of Boys",
+      "forbiddenWords": [
+        "Eniola",
+        "Kemi",
+        "Movie"
+      ]
+    },
+    {
+      "targetWord": "The Wedding Party",
+      "forbiddenWords": [
+        "Movie",
+        "Wedding",
+        "Comedy"
+      ]
+    },
+    {
+      "targetWord": "Sugar Rush",
+      "forbiddenWords": [
+        "Movie",
+        "Heist",
+        "EFCC"
+      ]
+    },
+    {
+      "targetWord": "Gangs of Lagos",
+      "forbiddenWords": [
+        "Movie",
+        "Crime",
+        "Amazon"
+      ]
+    },
+    {
+      "targetWord": "Blood Sisters",
+      "forbiddenWords": [
+        "Series",
+        "Netflix",
+        "Wedding"
+      ]
+    },
+    {
+      "targetWord": "Shanty Town",
+      "forbiddenWords": [
+        "Series",
+        "Netflix",
+        "Crime"
+      ]
+    },
+    {
+      "targetWord": "Far From Home",
+      "forbiddenWords": [
+        "Series",
+        "Netflix",
+        "School"
+      ]
+    },
+    {
+      "targetWord": "Anikulapo",
+      "forbiddenWords": [
+        "Movie",
+        "Netflix",
+        "Kunle Afolayan"
+      ]
+    },
+    {
+      "targetWord": "Living in Bondage",
+      "forbiddenWords": [
+        "Classic",
+        "Movie",
+        "Occult"
+      ]
+    },
+    {
+      "targetWord": "Aki and Pawpaw",
+      "forbiddenWords": [
+        "Comedy",
+        "Duo",
+        "Small"
+      ]
+    },
+    {
+      "targetWord": "Osita Iheme",
+      "forbiddenWords": [
+        "Pawpaw",
+        "Actor",
+        "Small"
+      ]
+    },
+    {
+      "targetWord": "Chinedu Ikedieze",
+      "forbiddenWords": [
+        "Aki",
+        "Actor",
+        "Small"
+      ]
+    },
+    {
+      "targetWord": "Mr Ibu",
+      "forbiddenWords": [
+        "Comedian",
+        "Actor",
+        "Belly"
+      ]
+    },
+    {
+      "targetWord": "Charles Inojie",
+      "forbiddenWords": [
+        "Actor",
+        "Comedian",
+        "The Johnsons"
+      ]
+    },
+    {
+      "targetWord": "Sam Loco Efe",
+      "forbiddenWords": [
+        "Actor",
+        "Legend",
+        "Late"
+      ]
+    },
+    {
+      "targetWord": "Pete Edochie",
+      "forbiddenWords": [
+        "Igbo",
+        "Actor",
+        "Legend"
+      ]
+    },
+    {
+      "targetWord": "Kanayo O. Kanayo",
+      "forbiddenWords": [
+        "Sacrifice",
+        "Actor",
+        "Meme"
+      ]
+    },
+    {
+      "targetWord": "Okrika",
+      "forbiddenWords": [
+        "Bend Down",
+        "Clothes",
+        "Second Hand"
+      ]
+    },
+    {
+      "targetWord": "Bend Down Select",
+      "forbiddenWords": [
+        "Okrika",
+        "Thrift",
+        "Clothes"
+      ]
+    },
+    {
+      "targetWord": "Tokunbo",
+      "forbiddenWords": [
+        "Foreign",
+        "Used",
+        "Car"
+      ]
+    },
+    {
+      "targetWord": "Molue",
+      "forbiddenWords": [
+        "Yellow",
+        "Bus",
+        "Old"
+      ]
+    },
+    {
+      "targetWord": "BRT",
+      "forbiddenWords": [
+        "Bus",
+        "Blue",
+        "Lagos"
+      ]
+    },
+    {
+      "targetWord": "Uber",
+      "forbiddenWords": [
+        "Ride",
+        "App",
+        "Car"
+      ]
+    },
+    {
+      "targetWord": "Bolt",
+      "forbiddenWords": [
+        "Ride",
+        "App",
+        "Cheap"
+      ]
+    },
+    {
+      "targetWord": "InDriver",
+      "forbiddenWords": [
+        "Ride",
+        "Negotiate",
+        "App"
+      ]
+    },
+    {
+      "targetWord": "Opay",
+      "forbiddenWords": [
+        "Bike",
+        "Green",
+        "App"
+      ]
+    },
+    {
+      "targetWord": "Gokada",
+      "forbiddenWords": [
+        "Bike",
+        "App",
+        "Banned"
+      ]
+    },
+    {
+      "targetWord": "Lekki Toll Gate",
+      "forbiddenWords": [
+        "Bridge",
+        "Payment",
+        "EndSARS"
+      ]
+    },
+    {
+      "targetWord": "Third Mainland Bridge",
+      "forbiddenWords": [
+        "Long",
+        "Lagos",
+        "Bridge"
+      ]
+    },
+    {
+      "targetWord": "Eko Bridge",
+      "forbiddenWords": [
+        "Bridge",
+        "Lagos",
+        "Island"
+      ]
+    },
+    {
+      "targetWord": "Computer Village",
+      "forbiddenWords": [
+        "Ikeja",
+        "Electronics",
+        "Phones"
+      ]
+    },
+    {
+      "targetWord": "Balogun Market",
+      "forbiddenWords": [
+        "Lagos Island",
+        "Fabric",
+        "Crowded"
+      ]
+    },
+    {
+      "targetWord": "Alaba International",
+      "forbiddenWords": [
+        "Market",
+        "Electronics",
+        "Ojo"
+      ]
+    },
+    {
+      "targetWord": "Idumota",
+      "forbiddenWords": [
+        "Market",
+        "Lagos",
+        "Island"
+      ]
+    },
+    {
+      "targetWord": "Yaba",
+      "forbiddenWords": [
+        "Market",
+        "Tech",
+        "Lagos"
+      ]
+    },
+    {
+      "targetWord": "Surulere",
+      "forbiddenWords": [
+        "Lagos",
+        "Stadium",
+        "Area"
+      ]
+    },
+    {
+      "targetWord": "Ikeja City Mall",
+      "forbiddenWords": [
+        "Shopping",
+        "Mall",
+        "Ikeja"
+      ]
+    },
+    {
+      "targetWord": "Palms Mall",
+      "forbiddenWords": [
+        "Shopping",
+        "Lekki",
+        "Mall"
+      ]
+    },
+    {
+      "targetWord": "Jara",
+      "forbiddenWords": [
+        "Extra",
+        "Bonus",
+        "Free"
+      ]
+    },
+    {
+      "targetWord": "Aso Ebi",
+      "forbiddenWords": [
+        "Uniform",
+        "Party",
+        "Fabric"
+      ]
+    },
+    {
+      "targetWord": "Spraying Money",
+      "forbiddenWords": [
+        "Naira",
+        "Dance",
+        "Party"
+      ]
+    },
+    {
+      "targetWord": "Small Chops",
+      "forbiddenWords": [
+        "Party",
+        "Snacks",
+        "Assorted"
+      ]
+    },
+    {
+      "targetWord": "Amala",
+      "forbiddenWords": [
+        "Yam Flour",
+        "Ewedu",
+        "Swallow"
+      ]
+    },
+    {
+      "targetWord": "Ewedu",
+      "forbiddenWords": [
+        "Soup",
+        "Green",
+        "Slimy"
+      ]
+    },
+    {
+      "targetWord": "Gbegiri",
+      "forbiddenWords": [
+        "Soup",
+        "Beans",
+        "Yellow"
+      ]
+    },
+    {
+      "targetWord": "Ofada Rice",
+      "forbiddenWords": [
+        "Local",
+        "Rice",
+        "Stew"
+      ]
+    },
+    {
+      "targetWord": "Ayamase",
+      "forbiddenWords": [
+        "Ofada",
+        "Stew",
+        "Green"
+      ]
+    },
+    {
+      "targetWord": "Pepper Soup",
+      "forbiddenWords": [
+        "Hot",
+        "Spicy",
+        "Goat"
+      ]
+    },
+    {
+      "targetWord": "Asun",
+      "forbiddenWords": [
+        "Goat",
+        "Spicy",
+        "Pepper"
+      ]
+    },
+    {
+      "targetWord": "Isi Ewu",
+      "forbiddenWords": [
+        "Goat",
+        "Head",
+        "Igbo"
+      ]
+    },
+    {
+      "targetWord": "Nkwobi",
+      "forbiddenWords": [
+        "Cowleg",
+        "Spicy",
+        "Igbo"
+      ]
+    },
+    {
+      "targetWord": "Catfish",
+      "forbiddenWords": [
+        "Fish",
+        "Pepper Soup",
+        "Whiskers"
+      ]
+    },
+    {
+      "targetWord": "Point and Kill",
+      "forbiddenWords": [
+        "Fresh",
+        "Fish",
+        "Select"
+      ]
+    },
+    {
+      "targetWord": "Agege Bread",
+      "forbiddenWords": [
+        "White",
+        "Bread",
+        "Soft"
+      ]
+    },
+    {
+      "targetWord": "Indomie",
+      "forbiddenWords": [
+        "Noodles",
+        "Instant",
+        "Blue"
+      ]
+    },
+    {
+      "targetWord": "Gala",
+      "forbiddenWords": [
+        "Sausage",
+        "Roll",
+        "Snack"
+      ]
+    },
+    {
+      "targetWord": "La Casera",
+      "forbiddenWords": [
+        "Apple",
+        "Drink",
+        "Green"
+      ]
+    },
+    {
+      "targetWord": "Ribena",
+      "forbiddenWords": [
+        "Blackcurrant",
+        "Drink",
+        "Purple"
+      ]
+    },
+    {
+      "targetWord": "Maltina",
+      "forbiddenWords": [
+        "Malt",
+        "Drink",
+        "Energy"
+      ]
+    },
+    {
+      "targetWord": "Fura da Nono",
+      "forbiddenWords": [
+        "Millet",
+        "Milk",
+        "Hausa"
+      ]
+    },
+    {
+      "targetWord": "Kunun",
+      "forbiddenWords": [
+        "Drink",
+        "Millet",
+        "White"
+      ]
+    },
+    {
+      "targetWord": "Kilishi",
+      "forbiddenWords": [
+        "Meat",
+        "Dried",
+        "Hausa"
+      ]
+    },
+    {
+      "targetWord": "Dankwa",
+      "forbiddenWords": [
+        "Sugar Cane",
+        "Snack",
+        "Sweet"
+      ]
+    },
+    {
+      "targetWord": "Groundnut",
+      "forbiddenWords": [
+        "Peanut",
+        "Nut",
+        "Roasted"
+      ]
+    },
+    {
+      "targetWord": "Coconut",
+      "forbiddenWords": [
+        "Fruit",
+        "White",
+        "Water"
+      ]
+    },
+    {
+      "targetWord": "Garden Egg",
+      "forbiddenWords": [
+        "Vegetable",
+        "Bitter",
+        "White"
+      ]
+    },
+    {
+      "targetWord": "Ugwu",
+      "forbiddenWords": [
+        "Vegetable",
+        "Green",
+        "Leaves"
+      ]
+    },
+    {
+      "targetWord": "Bitter Leaf",
+      "forbiddenWords": [
+        "Vegetable",
+        "Soup",
+        "Green"
+      ]
+    },
+    {
+      "targetWord": "Stockfish",
+      "forbiddenWords": [
+        "Fish",
+        "Dry",
+        "Hard"
+      ]
+    },
+    {
+      "targetWord": "Crayfish",
+      "forbiddenWords": [
+        "Seafood",
+        "Powder",
+        "Soup"
+      ]
+    },
+    {
+      "targetWord": "Locust Beans",
+      "forbiddenWords": [
+        "Iru",
+        "Seasoning",
+        "Smell"
+      ]
+    },
+    {
+      "targetWord": "Maggi",
+      "forbiddenWords": [
+        "Cube",
+        "Seasoning",
+        "Taste"
+      ]
+    },
+    {
+      "targetWord": "Yaji",
+      "forbiddenWords": [
+        "Spice",
+        "Powder",
+        "Suya"
+      ]
+    }
+  ],
+  "global": [
+    {
+      "targetWord": "iPhone",
+      "forbiddenWords": [
+        "Apple",
+        "Phone",
+        "Siri"
+      ]
+    },
+    {
+      "targetWord": "Netflix",
+      "forbiddenWords": [
+        "Movie",
+        "Stream",
+        "Chill"
+      ]
+    },
+    {
+      "targetWord": "WhatsApp",
+      "forbiddenWords": [
+        "Chat",
+        "Message",
+        "Status"
+      ]
+    },
+    {
+      "targetWord": "TikTok",
+      "forbiddenWords": [
+        "Video",
+        "Dance",
+        "China"
+      ]
+    },
+    {
+      "targetWord": "Instagram",
+      "forbiddenWords": [
+        "Photo",
+        "Story",
+        "Meta"
+      ]
+    },
+    {
+      "targetWord": "Twitter / X",
+      "forbiddenWords": [
+        "Tweet",
+        "Elon Musk",
+        "Bird"
+      ]
+    },
+    {
+      "targetWord": "Snapchat",
+      "forbiddenWords": [
+        "Filter",
+        "Ghost",
+        "Streak"
+      ]
+    },
+    {
+      "targetWord": "YouTube",
+      "forbiddenWords": [
+        "Video",
+        "Subscribe",
+        "Google"
+      ]
+    },
+    {
+      "targetWord": "Google",
+      "forbiddenWords": [
+        "Search",
+        "Engine",
+        "Android"
+      ]
+    },
+    {
+      "targetWord": "Amazon",
+      "forbiddenWords": [
+        "Shopping",
+        "Jeff Bezos",
+        "Prime"
+      ]
+    },
+    {
+      "targetWord": "Uber",
+      "forbiddenWords": [
+        "Taxi",
+        "Ride",
+        "Driver"
+      ]
+    },
+    {
+      "targetWord": "Tesla",
+      "forbiddenWords": [
+        "Car",
+        "Electric",
+        "Elon"
+      ]
+    },
+    {
+      "targetWord": "PlayStation",
+      "forbiddenWords": [
+        "Sony",
+        "Game",
+        "Console"
+      ]
+    },
+    {
+      "targetWord": "FIFA",
+      "forbiddenWords": [
+        "Football",
+        "Game",
+        "EA Sports"
+      ]
+    },
+    {
+      "targetWord": "Call of Duty",
+      "forbiddenWords": [
+        "War",
+        "Shooting",
+        "Game"
+      ]
+    },
+    {
+      "targetWord": "Candy Crush",
+      "forbiddenWords": [
+        "Game",
+        "Phone",
+        "Sweet"
+      ]
+    },
+    {
+      "targetWord": "Bitcoin",
+      "forbiddenWords": [
+        "Crypto",
+        "Money",
+        "Digital"
+      ]
+    },
+    {
+      "targetWord": "AI / ChatGPT",
+      "forbiddenWords": [
+        "Robot",
+        "Smart",
+        "OpenAI"
+      ]
+    },
+    {
+      "targetWord": "Wi-Fi",
+      "forbiddenWords": [
+        "Internet",
+        "Connect",
+        "Wireless"
+      ]
+    },
+    {
+      "targetWord": "Bluetooth",
+      "forbiddenWords": [
+        "Connect",
+        "Pair",
+        "Wireless"
+      ]
+    },
+    {
+      "targetWord": "Laptop",
+      "forbiddenWords": [
+        "Computer",
+        "Portable",
+        "Keyboard"
+      ]
+    },
+    {
+      "targetWord": "Charger",
+      "forbiddenWords": [
+        "Phone",
+        "Power",
+        "Battery"
+      ]
+    },
+    {
+      "targetWord": "Power Bank",
+      "forbiddenWords": [
+        "Charge",
+        "Battery",
+        "Portable"
+      ]
+    },
+    {
+      "targetWord": "Earbuds / AirPods",
+      "forbiddenWords": [
+        "Music",
+        "Ear",
+        "Wireless"
+      ]
+    },
+    {
+      "targetWord": "Selfie",
+      "forbiddenWords": [
+        "Photo",
+        "Picture",
+        "Face"
+      ]
+    },
+    {
+      "targetWord": "Michael Jackson",
+      "forbiddenWords": [
+        "King of Pop",
+        "Dance",
+        "Thriller"
+      ]
+    },
+    {
+      "targetWord": "Beyoncé",
+      "forbiddenWords": [
+        "Queen B",
+        "Jay-Z",
+        "Singer"
+      ]
+    },
+    {
+      "targetWord": "Rihanna",
+      "forbiddenWords": [
+        "Umbrella",
+        "Singer",
+        "Barbados"
+      ]
+    },
+    {
+      "targetWord": "Drake",
+      "forbiddenWords": [
+        "Rapper",
+        "Canada",
+        "Hotline Bling"
+      ]
+    },
+    {
+      "targetWord": "Justin Bieber",
+      "forbiddenWords": [
+        "Baby",
+        "Singer",
+        "Canada"
+      ]
+    },
+    {
+      "targetWord": "Chris Brown",
+      "forbiddenWords": [
+        "Singer",
+        "Dance",
+        "Loyal"
+      ]
+    },
+    {
+      "targetWord": "Nicki Minaj",
+      "forbiddenWords": [
+        "Rapper",
+        "Pink",
+        "Barbie"
+      ]
+    },
+    {
+      "targetWord": "Cardi B",
+      "forbiddenWords": [
+        "Rapper",
+        "WAP",
+        "Offset"
+      ]
+    },
+    {
+      "targetWord": "Kanye West",
+      "forbiddenWords": [
+        "Ye",
+        "Kim",
+        "Rapper"
+      ]
+    },
+    {
+      "targetWord": "Jay-Z",
+      "forbiddenWords": [
+        "Rapper",
+        "Beyoncé",
+        "Billionaire"
+      ]
+    },
+    {
+      "targetWord": "Eminem",
+      "forbiddenWords": [
+        "Rapper",
+        "Slim Shady",
+        "White"
+      ]
+    },
+    {
+      "targetWord": "50 Cent",
+      "forbiddenWords": [
+        "Rapper",
+        "In Da Club",
+        "Candy Shop"
+      ]
+    },
+    {
+      "targetWord": "Ed Sheeran",
+      "forbiddenWords": [
+        "Singer",
+        "Shape of You",
+        "Ginger"
+      ]
+    },
+    {
+      "targetWord": "Adele",
+      "forbiddenWords": [
+        "Singer",
+        "Hello",
+        "British"
+      ]
+    },
+    {
+      "targetWord": "Bob Marley",
+      "forbiddenWords": [
+        "Reggae",
+        "Jamaica",
+        "Weed"
+      ]
+    },
+    {
+      "targetWord": "Celine Dion",
+      "forbiddenWords": [
+        "Titanic",
+        "Singer",
+        "Heart"
+      ]
+    },
+    {
+      "targetWord": "Whitney Houston",
+      "forbiddenWords": [
+        "Singer",
+        "Bodyguard",
+        "I Will Always Love You"
+      ]
+    },
+    {
+      "targetWord": "Mariah Carey",
+      "forbiddenWords": [
+        "Singer",
+        "Christmas",
+        "High Note"
+      ]
+    },
+    {
+      "targetWord": "Usher",
+      "forbiddenWords": [
+        "Singer",
+        "Yeah",
+        "Confessions"
+      ]
+    },
+    {
+      "targetWord": "Lionel Messi",
+      "forbiddenWords": [
+        "Football",
+        "Argentina",
+        "GOAT"
+      ]
+    },
+    {
+      "targetWord": "Cristiano Ronaldo",
+      "forbiddenWords": [
+        "CR7",
+        "Portugal",
+        "Football"
+      ]
+    },
+    {
+      "targetWord": "Neymar",
+      "forbiddenWords": [
+        "Brazil",
+        "Football",
+        "PSG"
+      ]
+    },
+    {
+      "targetWord": "Kylian Mbappé",
+      "forbiddenWords": [
+        "France",
+        "Football",
+        "Speed"
+      ]
+    },
+    {
+      "targetWord": "Manchester United",
+      "forbiddenWords": [
+        "Red Devils",
+        "Club",
+        "Old Trafford"
+      ]
+    },
+    {
+      "targetWord": "Chelsea",
+      "forbiddenWords": [
+        "Blues",
+        "London",
+        "Club"
+      ]
+    },
+    {
+      "targetWord": "Arsenal",
+      "forbiddenWords": [
+        "Gunners",
+        "London",
+        "Club"
+      ]
+    },
+    {
+      "targetWord": "Liverpool",
+      "forbiddenWords": [
+        "Reds",
+        "Anfield",
+        "Club"
+      ]
+    },
+    {
+      "targetWord": "Barcelona",
+      "forbiddenWords": [
+        "Spain",
+        "Club",
+        "Messi"
+      ]
+    },
+    {
+      "targetWord": "Real Madrid",
+      "forbiddenWords": [
+        "Spain",
+        "Club",
+        "White"
+      ]
+    },
+    {
+      "targetWord": "LeBron James",
+      "forbiddenWords": [
+        "Basketball",
+        "NBA",
+        "King"
+      ]
+    },
+    {
+      "targetWord": "Michael Jordan",
+      "forbiddenWords": [
+        "Basketball",
+        "NBA",
+        "Bulls"
+      ]
+    },
+    {
+      "targetWord": "Serena Williams",
+      "forbiddenWords": [
+        "Tennis",
+        "Champion",
+        "Sister"
+      ]
+    },
+    {
+      "targetWord": "Usain Bolt",
+      "forbiddenWords": [
+        "Runner",
+        "Fast",
+        "Jamaica"
+      ]
+    },
+    {
+      "targetWord": "Anthony Joshua",
+      "forbiddenWords": [
+        "Boxing",
+        "Nigeria",
+        "Champ"
+      ]
+    },
+    {
+      "targetWord": "World Cup",
+      "forbiddenWords": [
+        "Football",
+        "FIFA",
+        "Trophy"
+      ]
+    },
+    {
+      "targetWord": "Olympics",
+      "forbiddenWords": [
+        "Games",
+        "Gold",
+        "Medal"
+      ]
+    },
+    {
+      "targetWord": "Premier League",
+      "forbiddenWords": [
+        "EPL",
+        "England",
+        "Football"
+      ]
+    },
+    {
+      "targetWord": "Champions League",
+      "forbiddenWords": [
+        "UEFA",
+        "Football",
+        "Europe"
+      ]
+    },
+    {
+      "targetWord": "Black Panther",
+      "forbiddenWords": [
+        "Wakanda",
+        "Marvel",
+        "Chadwick"
+      ]
+    },
+    {
+      "targetWord": "Avengers",
+      "forbiddenWords": [
+        "Marvel",
+        "Superheroes",
+        "Thanos"
+      ]
+    },
+    {
+      "targetWord": "Spider-Man",
+      "forbiddenWords": [
+        "Web",
+        "Peter Parker",
+        "Marvel"
+      ]
+    },
+    {
+      "targetWord": "Batman",
+      "forbiddenWords": [
+        "DC",
+        "Joker",
+        "Gotham"
+      ]
+    },
+    {
+      "targetWord": "Superman",
+      "forbiddenWords": [
+        "DC",
+        "Clark Kent",
+        "Kryptonite"
+      ]
+    },
+    {
+      "targetWord": "Wonder Woman",
+      "forbiddenWords": [
+        "DC",
+        "Amazon",
+        "Hero"
+      ]
+    },
+    {
+      "targetWord": "Game of Thrones",
+      "forbiddenWords": [
+        "Dragon",
+        "Winter",
+        "Series"
+      ]
+    },
+    {
+      "targetWord": "Squid Game",
+      "forbiddenWords": [
+        "Netflix",
+        "Korea",
+        "Green Light"
+      ]
+    },
+    {
+      "targetWord": "Money Heist",
+      "forbiddenWords": [
+        "Bella Ciao",
+        "Professor",
+        "Netflix"
+      ]
+    },
+    {
+      "targetWord": "Bridgerton",
+      "forbiddenWords": [
+        "Netflix",
+        "Period",
+        "Romance"
+      ]
+    },
+    {
+      "targetWord": "Coming to America",
+      "forbiddenWords": [
+        "Eddie Murphy",
+        "Prince",
+        "Zamunda"
+      ]
+    },
+    {
+      "targetWord": "The Lion King",
+      "forbiddenWords": [
+        "Simba",
+        "Disney",
+        "Mufasa"
+      ]
+    },
+    {
+      "targetWord": "Frozen",
+      "forbiddenWords": [
+        "Elsa",
+        "Let It Go",
+        "Disney"
+      ]
+    },
+    {
+      "targetWord": "Tom & Jerry",
+      "forbiddenWords": [
+        "Cat",
+        "Mouse",
+        "Cartoon"
+      ]
+    },
+    {
+      "targetWord": "SpongeBob",
+      "forbiddenWords": [
+        "SquarePants",
+        "Patrick",
+        "Cartoon"
+      ]
+    },
+    {
+      "targetWord": "Mickey Mouse",
+      "forbiddenWords": [
+        "Disney",
+        "Mouse",
+        "Ears"
+      ]
+    },
+    {
+      "targetWord": "James Bond",
+      "forbiddenWords": [
+        "007",
+        "Spy",
+        "Movie"
+      ]
+    },
+    {
+      "targetWord": "Harry Potter",
+      "forbiddenWords": [
+        "Wizard",
+        "Hogwarts",
+        "Magic"
+      ]
+    },
+    {
+      "targetWord": "Titanic",
+      "forbiddenWords": [
+        "Ship",
+        "Iceberg",
+        "Jack"
+      ]
+    },
+    {
+      "targetWord": "Avatar",
+      "forbiddenWords": [
+        "Blue",
+        "Movie",
+        "Pandora"
+      ]
+    },
+    {
+      "targetWord": "Barbie",
+      "forbiddenWords": [
+        "Doll",
+        "Pink",
+        "Movie"
+      ]
+    },
+    {
+      "targetWord": "Will Smith",
+      "forbiddenWords": [
+        "Actor",
+        "Slap",
+        "Fresh Prince"
+      ]
+    },
+    {
+      "targetWord": "Dwayne Johnson",
+      "forbiddenWords": [
+        "The Rock",
+        "Actor",
+        "Wrestler"
+      ]
+    },
+    {
+      "targetWord": "Kevin Hart",
+      "forbiddenWords": [
+        "Comedian",
+        "Short",
+        "Funny"
+      ]
+    },
+    {
+      "targetWord": "Leonardo DiCaprio",
+      "forbiddenWords": [
+        "Actor",
+        "Titanic",
+        "Oscar"
+      ]
+    },
+    {
+      "targetWord": "Zendaya",
+      "forbiddenWords": [
+        "Actress",
+        "Spider-Man",
+        "Euphoria"
+      ]
+    },
+    {
+      "targetWord": "Kim Kardashian",
+      "forbiddenWords": [
+        "Kanye",
+        "Reality",
+        "Famous"
+      ]
+    },
+    {
+      "targetWord": "Coca-Cola",
+      "forbiddenWords": [
+        "Soda",
+        "Drink",
+        "Red"
+      ]
+    },
+    {
+      "targetWord": "Pepsi",
+      "forbiddenWords": [
+        "Soda",
+        "Drink",
+        "Blue"
+      ]
+    },
+    {
+      "targetWord": "McDonald's",
+      "forbiddenWords": [
+        "Burger",
+        "Fries",
+        "Big Mac"
+      ]
+    },
+    {
+      "targetWord": "KFC",
+      "forbiddenWords": [
+        "Chicken",
+        "Fried",
+        "Colonel"
+      ]
+    },
+    {
+      "targetWord": "Dominos",
+      "forbiddenWords": [
+        "Pizza",
+        "Delivery",
+        "Cheese"
+      ]
+    },
+    {
+      "targetWord": "Indomie",
+      "forbiddenWords": [
+        "Noodles",
+        "Instant",
+        "Hungry"
+      ]
+    },
+    {
+      "targetWord": "Nike",
+      "forbiddenWords": [
+        "Just Do It",
+        "Shoes",
+        "Swoosh"
+      ]
+    },
+    {
+      "targetWord": "Adidas",
+      "forbiddenWords": [
+        "Stripes",
+        "Shoes",
+        "Sport"
+      ]
+    },
+    {
+      "targetWord": "Gucci",
+      "forbiddenWords": [
+        "Fashion",
+        "Luxury",
+        "Italy"
+      ]
+    },
+    {
+      "targetWord": "Louis Vuitton",
+      "forbiddenWords": [
+        "LV",
+        "Bag",
+        "Luxury"
+      ]
+    },
+    {
+      "targetWord": "Rolex",
+      "forbiddenWords": [
+        "Watch",
+        "Expensive",
+        "Time"
+      ]
+    },
+    {
+      "targetWord": "Toyota",
+      "forbiddenWords": [
+        "Car",
+        "Corolla",
+        "Camry"
+      ]
+    },
+    {
+      "targetWord": "Mercedes Benz",
+      "forbiddenWords": [
+        "Car",
+        "Luxury",
+        "German"
+      ]
+    },
+    {
+      "targetWord": "Range Rover",
+      "forbiddenWords": [
+        "Car",
+        "SUV",
+        "Luxury"
+      ]
+    },
+    {
+      "targetWord": "BMW",
+      "forbiddenWords": [
+        "Car",
+        "German",
+        "Speed"
+      ]
+    },
+    {
+      "targetWord": "Lexus",
+      "forbiddenWords": [
+        "Car",
+        "Toyota",
+        "Luxury"
+      ]
+    },
+    {
+      "targetWord": "Bible",
+      "forbiddenWords": [
+        "Book",
+        "Christian",
+        "God"
+      ]
+    },
+    {
+      "targetWord": "Quran",
+      "forbiddenWords": [
+        "Book",
+        "Muslim",
+        "Allah"
+      ]
+    },
+    {
+      "targetWord": "Church",
+      "forbiddenWords": [
+        "Sunday",
+        "Pray",
+        "Building"
+      ]
+    },
+    {
+      "targetWord": "Mosque",
+      "forbiddenWords": [
+        "Friday",
+        "Pray",
+        "Building"
+      ]
+    },
+    {
+      "targetWord": "Wedding",
+      "forbiddenWords": [
+        "Bride",
+        "Groom",
+        "Ring"
+      ]
+    },
+    {
+      "targetWord": "Birthday",
+      "forbiddenWords": [
+        "Cake",
+        "Year",
+        "Party"
+      ]
+    },
+    {
+      "targetWord": "Valentine",
+      "forbiddenWords": [
+        "Love",
+        "Red",
+        "February"
+      ]
+    },
+    {
+      "targetWord": "Christmas",
+      "forbiddenWords": [
+        "December",
+        "Jesus",
+        "Santa"
+      ]
+    },
+    {
+      "targetWord": "School",
+      "forbiddenWords": [
+        "Study",
+        "Teacher",
+        "Class"
+      ]
+    },
+    {
+      "targetWord": "Exam",
+      "forbiddenWords": [
+        "Test",
+        "Write",
+        "Pass"
+      ]
+    },
+    {
+      "targetWord": "University",
+      "forbiddenWords": [
+        "Degree",
+        "School",
+        "Campus"
+      ]
+    },
+    {
+      "targetWord": "Doctor",
+      "forbiddenWords": [
+        "Hospital",
+        "Medicine",
+        "Sick"
+      ]
+    },
+    {
+      "targetWord": "Lawyer",
+      "forbiddenWords": [
+        "Court",
+        "Judge",
+        "Case"
+      ]
+    },
+    {
+      "targetWord": "Police",
+      "forbiddenWords": [
+        "Arrest",
+        "Uniform",
+        "Station"
+      ]
+    },
+    {
+      "targetWord": "Visa",
+      "forbiddenWords": [
+        "Passport",
+        "Travel",
+        "Embassy"
+      ]
+    },
+    {
+      "targetWord": "Passport",
+      "forbiddenWords": [
+        "Travel",
+        "Book",
+        "ID"
+      ]
+    },
+    {
+      "targetWord": "Airport",
+      "forbiddenWords": [
+        "Plane",
+        "Travel",
+        "Fly"
+      ]
+    },
+    {
+      "targetWord": "Lagos",
+      "forbiddenWords": [
+        "City",
+        "Nigeria",
+        "Traffic"
+      ]
+    },
+    {
+      "targetWord": "London",
+      "forbiddenWords": [
+        "UK",
+        "England",
+        "Queen"
+      ]
+    },
+    {
+      "targetWord": "Dubai",
+      "forbiddenWords": [
+        "UAE",
+        "Travel",
+        "Shopping"
+      ]
+    },
+    {
+      "targetWord": "New York",
+      "forbiddenWords": [
+        "USA",
+        "City",
+        "America"
+      ]
+    },
+    {
+      "targetWord": "Canada",
+      "forbiddenWords": [
+        "Country",
+        "Cold",
+        "Japa"
+      ]
+    },
+    {
+      "targetWord": "China",
+      "forbiddenWords": [
+        "Country",
+        "Asia",
+        "Goods"
+      ]
+    },
+    {
+      "targetWord": "Rice",
+      "forbiddenWords": [
+        "Food",
+        "White",
+        "Grain"
+      ]
+    },
+    {
+      "targetWord": "Beans",
+      "forbiddenWords": [
+        "Food",
+        "Protein",
+        "Eat"
+      ]
+    },
+    {
+      "targetWord": "Chicken",
+      "forbiddenWords": [
+        "Bird",
+        "Meat",
+        "Food"
+      ]
+    },
+    {
+      "targetWord": "Fish",
+      "forbiddenWords": [
+        "Water",
+        "Swim",
+        "Food"
+      ]
+    },
+    {
+      "targetWord": "Water",
+      "forbiddenWords": [
+        "Drink",
+        "Liquid",
+        "Thirsty"
+      ]
+    },
+    {
+      "targetWord": "Bread",
+      "forbiddenWords": [
+        "Food",
+        "Loaf",
+        "Flour"
+      ]
+    },
+    {
+      "targetWord": "Egg",
+      "forbiddenWords": [
+        "Chicken",
+        "Fry",
+        "Boil"
+      ]
+    },
+    {
+      "targetWord": "Money",
+      "forbiddenWords": [
+        "Cash",
+        "Spend",
+        "Buy"
+      ]
+    },
+    {
+      "targetWord": "Dollar",
+      "forbiddenWords": [
+        "Money",
+        "USA",
+        "Currency"
+      ]
+    }
+  ]
+}

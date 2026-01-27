@@ -1,0 +1,144 @@
+/* ===================================
+   CSS Variables & Theme Colors
+   =================================== */
+:root {
+  /* Green Palette */
+  --green-900: #14532d;
+  --green-800: #166534;
+
+  /* Yellow Palette */
+  --yellow-400: #facc15;
+  --yellow-300: #fde047;
+
+  /* Red Palette */
+  --red-700: #b91c1c;
+  --red-600: #dc2626;
+  --red-500: #ef4444;
+
+  /* Neutral Colors */
+  --white: #ffffff;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-800: #1f2937;
+
+  /* Team Colors */
+  --team1-color: #3b82f6; /* blue-500 */
+  --team2-color: #ec4899; /* pink-500 */
+  --team3-color: #f97316; /* orange-500 */
+  --team4-color: #8b5cf6; /* violet-500 */
+}
+
+/* ===================================
+   Global Reset & Base Styles
+   =================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  background-color: var(--green-900);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 28rem;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===================================
+   Screen Management
+   =================================== */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ===================================
+   Splitting.js Utilities
+   =================================== */
+.splitting .word,
+.splitting .char {
+  display: inline-block;
+}
+
+.splitting .char {
+  position: relative;
+}
+
+.splitting .char::before,
+.splitting .char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: inherit;
+  user-select: none;
+}
+
+.splitting {
+  --word-center: calc((var(--word-total) - 1) / 2);
+  --char-center: calc((var(--char-total) - 1) / 2);
+  --line-center: calc((var(--line-total) - 1) / 2);
+}
+
+.splitting .word {
+  --word-percent: calc(var(--word-index) / var(--word-total));
+  --line-percent: calc(var(--line-index) / var(--line-total));
+}
+
+.splitting .char {
+  --char-percent: calc(var(--char-index) / var(--char-total));
+  --char-offset: calc(var(--char-index) - var(--char-center));
+  --distance: calc(
+    (var(--char-offset) * var(--char-offset)) / var(--char-center)
+  );
+  --distance-sine: calc(var(--char-offset) / var(--char-center));
+  --distance-percent: calc((var(--distance) / var(--char-center)));
+}
+
+/* ===================================
+   Responsive Typography
+   =================================== */
+@media (min-width: 768px) {
+  .title-screen h1 {
+    font-size: 4.5rem;
+  }
+
+  .target-word {
+    font-size: 3rem;
+  }
+
+  .forbidden-word {
+    font-size: 1.875rem;
+  }
+
+  .winner-team {
+    font-size: 3rem;
+  }
+
+  .trophy {
+    font-size: 5rem;
+  }
+
+  .final-trophy {
+    font-size: 8rem;
+  }
+
+  .final-winner-team {
+    font-size: 4rem;
+  }
+}

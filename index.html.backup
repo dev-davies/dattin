@@ -1,0 +1,1379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dat Tin 🇳🇬</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+      :root {
+        --green-900: #14532d;
+        --green-800: #166534;
+        --yellow-400: #facc15;
+        --yellow-300: #fde047;
+        --red-700: #b91c1c;
+        --red-600: #dc2626;
+        --red-500: #ef4444;
+        --white: #ffffff;
+        --gray-200: #e5e7eb;
+        --gray-300: #d1d5db;
+        --gray-800: #1f2937;
+
+        --team1-color: #3b82f6; /* blue-500 */
+        --team2-color: #ec4899; /* pink-500 */
+        --team3-color: #f97316; /* orange-500 */
+        --team4-color: #8b5cf6; /* violet-500 */
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        margin: 0;
+        background-color: var(--green-900);
+        color: var(--white);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+      
+      main {
+        width: 100%;
+        max-width: 28rem; /* max-w-md */
+        margin: auto;
+        text-align: center;
+      }
+
+      .screen {
+        display: none; /* Initially hide all screens */
+      }
+
+      .screen.active {
+        display: block;
+      }
+      
+      /* Buttons */
+      .btn {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+        transform: translateZ(0);
+        transition: all 0.15s ease-in-out;
+      }
+      .btn:active {
+        transform: scale(0.95);
+      }
+      .btn-primary {
+        background-color: var(--yellow-400);
+        color: var(--green-900);
+      }
+      .btn-primary:hover {
+        background-color: var(--yellow-300);
+      }
+      .btn-pass {
+        background-color: var(--red-700);
+        color: var(--white);
+      }
+      .btn-pass:hover {
+        background-color: var(--red-600);
+      }
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--yellow-400);
+        border: 2px solid var(--yellow-400);
+      }
+      .btn-secondary:hover {
+        background-color: var(--yellow-400);
+        color: var(--green-900);
+      }
+
+      /* Title Screens */
+      .title-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .title-screen h1 {
+        font-size: 3.75rem;
+        font-weight: 700;
+        color: var(--yellow-400);
+        letter-spacing: -0.025em;
+        margin: 0;
+      }
+      .title-screen .rules, .team-setup-box {
+        background-color: var(--green-800);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+        text-align: left;
+        width: 100%;
+        max-width: 24rem;
+        box-sizing: border-box;
+      }
+      .rules h2, .team-setup-box h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--yellow-300);
+        margin-top: 0;
+        text-align: center;
+      }
+      .rules h2, .team-setup-box h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--yellow-300);
+        margin-top: 0;
+        text-align: center;
+      }
+      .rules p { font-size: 1rem; color: var(--gray-200); margin: 0; line-height: 1.6; }
+      .rules ul { margin: 1rem 0; padding-left: 1.5rem; text-align: left; }
+      .rules li { margin-bottom: 0.5rem; color: var(--gray-200); }
+      .instructions-box {
+        background-color: var(--green-800);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+        text-align: left;
+        width: 100%;
+        max-width: 28rem;
+        box-sizing: border-box;
+      }
+      .instructions-heading { font-size: 1.5rem; font-weight: 700; color: var(--yellow-400); text-align: center; margin-bottom: 1rem; }
+      .instructions-list { list-style-type: none; padding: 0; display: flex; flex-direction: column; gap: 1rem; }
+      .instruction-item { display: flex; gap: 1rem; align-items: flex-start; }
+      .instruction-icon { font-size: 1.5rem; min-width: 2rem; }
+      .instruction-text { font-size: 1rem; color: var(--gray-200); line-height: 1.5;}
+      .btn-play-now { margin-top: 1.5rem; width: 100%; font-size: 1.5rem; font-weight: 700; }
+      
+      .team-count-selector { display: flex; justify-content: space-around; gap: 1rem; }
+      .team-count-btn {
+        flex-grow: 1;
+        background-color: var(--yellow-400);
+        color: var(--green-900);
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+      }
+      .team-count-btn:hover { background-color: var(--yellow-300); transform: translateY(-2px); }
+      .team-count-btn:active { transform: scale(0.95) translateY(0); }
+      
+      .team-count-btn:hover { background-color: var(--yellow-300); transform: translateY(-2px); }
+      .team-count-btn:active { transform: scale(0.95) translateY(0); }
+      
+      /* Deck Selector */
+      .deck-selector {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+      }
+      .deck-option {
+        background-color: var(--green-900);
+        border: 2px solid var(--gray-300);
+        color: var(--gray-300);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .deck-option.selected {
+        background-color: var(--yellow-400);
+        border-color: var(--yellow-400);
+        color: var(--green-900);
+      }
+      .deck-option:hover {
+        transform: translateY(-2px);
+      }
+      .timer-btn.selected {
+        background-color: var(--yellow-400) !important;
+        border-color: var(--yellow-400) !important;
+        color: var(--green-900) !important;
+      }
+      #current-team-indicator {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        color: var(--white);
+        transition: background-color 0.3s ease;
+      }
+      .game-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(22, 101, 52, 0.5);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .score-display { position: relative; }
+      .score-display .label { font-size: 1.125rem; color: var(--gray-300); }
+      .score-display .value { display: inline-block; font-size: 1.5rem; font-weight: 700; margin-left: 0.5rem; color: var(--white); }
+      .timer { font-size: 2.25rem; font-weight: 700; color: var(--yellow-400); }
+      .timer.low-time { color: var(--red-500); animation: pulse 1s infinite; }
+
+      .card-container { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+      .game-card {
+        background-color: var(--white);
+        color: var(--gray-800);
+        border-radius: 0.75rem;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+        padding: 1.5rem;
+        width: 100%;
+      }
+      .card-section { text-align: center; }
+      .card-section.target { border-bottom: 2px solid var(--gray-200); padding-bottom: 1rem; }
+      .card-section.forbidden { margin-top: 1rem; }
+      .card-section .label { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+      .card-section.target .label { color: #15803d; }
+      .card-section.forbidden .label { color: #b91c1c; }
+
+      .target-word { font-size: 2.25rem; font-weight: 700; color: var(--green-900); margin-top: 0.25rem; }
+      .forbidden-words-list { list-style: none; padding: 0; margin: 0.5rem 0 0 0; display: flex; flex-direction: column; gap: 0.25rem; }
+      .forbidden-word { font-size: 1.5rem; font-weight: 500; color: #991b1b; }
+
+      .game-footer { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+
+      /* Scoreboard */
+      .scoreboard {
+        width: 100%;
+        max-width: 24rem;
+        background-color: var(--green-800);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        box-sizing: border-box;
+      }
+      .scoreboard-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        color: var(--white);
+      }
+      .scoreboard-item .team-score { font-weight: 700; color: var(--yellow-400); }
+      
+      /* Winner Display */
+      .winner-display {
+        background: linear-gradient(135deg, var(--yellow-400), var(--yellow-300));
+        padding: 2rem 1.5rem;
+        border-radius: 1rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,.3), 0 10px 10px -5px rgba(0,0,0,.2);
+      }
+      .winner-banner {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--green-900);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+      }
+      .winner-team {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--green-900);
+        margin: 0.5rem 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      }
+      .trophy {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        animation: bounce 2s infinite;
+      }
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: var(--red-500);
+        animation: confetti-fall 3s linear infinite;
+      }
+      @keyframes confetti-fall {
+        0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(400%) rotate(720deg); opacity: 0; }
+      }
+      .confetti:nth-child(1) { left: 10%; animation-delay: 0s; background-color: var(--red-500); }
+      .confetti:nth-child(2) { left: 20%; animation-delay: 0.2s; background-color: var(--yellow-400); }
+      .confetti:nth-child(3) { left: 30%; animation-delay: 0.4s; background-color: var(--green-800); }
+      .confetti:nth-child(4) { left: 40%; animation-delay: 0.6s; background-color: var(--team1-color); }
+      .confetti:nth-child(5) { left: 50%; animation-delay: 0.8s; background-color: var(--team2-color); }
+      .confetti:nth-child(6) { left: 60%; animation-delay: 1s; background-color: var(--team3-color); }
+      .confetti:nth-child(7) { left: 70%; animation-delay: 1.2s; background-color: var(--team4-color); }
+      .confetti:nth-child(8) { left: 80%; animation-delay: 1.4s; background-color: var(--red-500); }
+      .confetti:nth-child(9) { left: 90%; animation-delay: 1.6s; background-color: var(--yellow-400); }
+      
+      /* Final Winner Display */
+      .final-winner-display {
+        background: linear-gradient(135deg, var(--yellow-400), var(--yellow-300));
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,.4);
+        text-align: center;
+      }
+      .final-trophy {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        animation: bounce 1.5s infinite;
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+      }
+      .victory-message {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--green-900);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+      }
+      .final-winner-team {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--green-900);
+        margin: 1rem 0;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+      }
+      .final-score {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--green-800);
+        margin-top: 0.5rem;
+      }
+      
+      /* Get Ready Countdown */
+      .countdown-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .countdown-number {
+        font-size: 8rem;
+        font-weight: 700;
+        color: var(--yellow-400);
+        text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        animation: pulse 1s infinite;
+      }
+      .countdown-message {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--white);
+        text-align: center;
+      }
+      .btn-skip {
+        background-color: var(--gray-300);
+        color: var(--green-900);
+        font-size: 1.125rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+      }
+      .btn-skip:hover {
+        background-color: var(--white);
+        transform: scale(1.05);
+      }
+      .btn-skip:active {
+        transform: scale(0.95);
+      }
+      
+      /* Quit Button */
+      .btn-quit {
+        background-color: var(--red-700);
+        color: var(--white);
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+        font-weight: 600;
+      }
+      .btn-quit:hover {
+        background-color: var(--red-600);
+        transform: scale(1.05);
+      }
+      .btn-quit:active {
+        transform: scale(0.95);
+      }
+      
+      @media (min-width: 768px) {
+        .title-screen h1 { font-size: 4.5rem; }
+        .target-word { font-size: 3rem; }
+        .forbidden-word { font-size: 1.875rem; }
+        .winner-team { font-size: 3rem; }
+        .trophy { font-size: 5rem; }
+        .final-trophy { font-size: 8rem; }
+        .final-winner-team { font-size: 4rem; }
+      }
+
+      /** Splitting.js **/
+      .splitting .word, .splitting .char { display: inline-block; }
+      .splitting .char { position: relative; }
+      .splitting .char::before, .splitting .char::after {
+        content: attr(data-char);
+        position: absolute; top: 0; left: 0;
+        visibility: hidden; transition: inherit; user-select: none;
+      }
+      .splitting {
+        --word-center: calc((var(--word-total) - 1) / 2);
+        --char-center: calc((var(--char-total) - 1) / 2);
+        --line-center: calc((var(--line-total) - 1) / 2);
+      }
+      .splitting .word {
+        --word-percent: calc(var(--word-index) / var(--word-total));
+        --line-percent: calc(var(--line-index) / var(--line-total));
+      }
+      .splitting .char {
+        --char-percent: calc(var(--char-index) / var(--char-total));
+        --char-offset: calc(var(--char-index) - var(--char-center));
+        --distance: calc( (var(--char-offset) * var(--char-offset)) / var(--char-center) );
+        --distance-sine: calc(var(--char-offset) / var(--char-center));
+        --distance-percent: calc((var(--distance) / var(--char-center)));
+      }
+      .target-word .char {
+        animation: char-in 0.4s cubic-bezier(0.5, 0, 0.1, 1) both;
+        animation-delay: calc(var(--char-index) * 20ms);
+      }
+
+      @keyframes char-in {
+        from {
+          transform: translateY(25px) rotate(5deg);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+      }
+      /** Animate.css **/
+      .animated{animation-duration:1s;animation-fill-mode:both}.animated.infinite{animation-iteration-count:infinite}.animated.hinge{animation-duration:2s}.animated.flipOutX,.animated.flipOutY,.animated.bounceIn,.animated.bounceOut{animation-duration:.75s}@keyframes bounce{from,20%,53%,80%,to{animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);transform:translate3d(0,0,0)}40%,43%{animation-timing-function:cubic-bezier(0.755,0.05,0.855,0.06);transform:translate3d(0,-30px,0)}70%{animation-timing-function:cubic-bezier(0.755,0.05,0.855,0.06);transform:translate3d(0,-15px,0)}90%{transform:translate3d(0,-4px,0)}}.bounce{animation-name:bounce;transform-origin:center bottom}@keyframes flash{from,50%,to{opacity:1}25%,75%{opacity:0}}.flash{animation-name:flash}@keyframes pulse{from{transform:scale3d(1,1,1)}50%{transform:scale3d(1.05,1.05,1.05)}to{transform:scale3d(1,1,1)}}.pulse{animation-name:pulse}@keyframes rubberBand{from{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,0.75,1)}40%{transform:scale3d(0.75,1.25,1)}50%{transform:scale3d(1.15,0.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}to{transform:scale3d(1,1,1)}}.rubberBand{animation-name:rubberBand}@keyframes shake{from,to{transform:translate3d(0,0,0)}10%,30%,50%,70%,90%{transform:translate3d(-10px,0,0)}20%,40%,60%,80%{transform:translate3d(10px,0,0)}}.shake{animation-name:shake}@keyframes headShake{0%{transform:translateX(0)}6.5%{transform:translateX(-6px) rotateY(-9deg)}18.5%{transform:translateX(5px) rotateY(7deg)}31.5%{transform:translateX(-3px) rotateY(-5deg)}43.5%{transform:translateX(2px) rotateY(3deg)}50%{transform:translateX(0)}}.headShake{animation-timing-function:ease-in-out;animation-name:headShake}@keyframes swing{20%{transform:rotate3d(0,0,1,15deg)}40%{transform:rotate3d(0,0,1,-10deg)}60%{transform:rotate3d(0,0,1,5deg)}80%{transform:rotate3d(0,0,1,-5deg)}to{transform:rotate3d(0,0,1,0deg)}}.swing{transform-origin:top center;animation-name:swing}@keyframes tada{from{transform:scale3d(1,1,1)}10%,20%{transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)}30%,50%,70%,90%{transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)}40%,60%,80%{transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)}to{transform:scale3d(1,1,1)}}.tada{animation-name:tada}@keyframes wobble{from{transform:none}15%{transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)}30%{transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg)}45%{transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)}60%{transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg)}75%{transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)}to{transform:none}}.wobble{animation-name:wobble}@keyframes jello{from,11.1%,to{transform:none}22.2%{transform:skewX(-12.5deg) skewY(-12.5deg)}33.3%{transform:skewX(6.25deg) skewY(6.25deg)}44.4%{transform:skewX(-3.125deg) skewY(-3.125deg)}55.5%{transform:skewX(1.5625deg) skewY(1.5625deg)}66.6%{transform:skewX(-.78125deg) skewY(-.78125deg)}77.7%{transform:skewX(.390625deg) skewY(.390625deg)}88.8%{transform:skewX(-.1953125deg) skewY(-.1953125deg)}}.jello{animation-name:jello;transform-origin:center}@keyframes bounceIn{from,20%,40%,60%,80%,to{animation-timing-function:cubic-bezier(0.215,0.61,0.355,1)}0%{opacity:0;transform:scale3d(.3,.3,.3)}20%{transform:scale3d(1.1,1.1,1.1)}40%{transform:scale3d(.9,.9,.9)}60%{opacity:1;transform:scale3d(1.03,1.03,1.03)}80%{transform:scale3d(.97,.97,.97)}to{opacity:1;transform:scale3d(1,1,1)}}.bounceIn{animation-name:bounceIn}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{animation-name:fadeIn}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}.fadeInUp{animation-name:fadeInUp}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.fadeOut{animation-name:fadeOut}
+      .sound-btn {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        border: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        color: var(--white);
+      }
+      .sound-btn:hover {
+        background: rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+      }
+      
+      /* Install Prompt */
+      .install-prompt {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to top, var(--green-900), var(--green-800));
+        padding: 1.5rem;
+        border-top: 2px solid var(--yellow-400);
+        box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        z-index: 2000;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        box-sizing: border-box;
+      }
+      .install-prompt.visible {
+        transform: translateY(0);
+      }
+      .install-content p {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--white);
+        text-align: center;
+      }
+      .install-actions {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+      }
+      .btn-install {
+        background-color: var(--yellow-400);
+        color: var(--green-900);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        flex: 1;
+        max-width: 10rem;
+      }
+      .btn-close-install {
+        background-color: transparent;
+        color: var(--gray-300);
+        border: 2px solid var(--gray-300);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        flex: 1;
+        max-width: 10rem;
+      }
+      .review-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0,0,0,0.2);
+        margin-bottom: 0.5rem;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+      }
+      .review-word { font-weight: 600; color: var(--white); }
+      .status-btn {
+        padding: 0.25rem 0.75rem;
+        border: none;
+        border-radius: 0.25rem;
+        font-weight: 700;
+        cursor: pointer;
+        min-width: 5rem;
+      }
+      .status-btn.correct { background-color: var(--yellow-400); color: var(--green-900); }
+      .status-btn.pass { background-color: var(--red-600); color: var(--white); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button id="sound-btn" class="sound-btn">🔊</button>
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="screen active">
+        <div class="title-screen">
+          <h1>Dat Tin <span style="font-size: 75%">🇳🇬</span></h1>
+          <div class="instructions-box">
+             <div class="instructions-heading">How To Play</div>
+             <ul class="instructions-list">
+               <li class="instruction-item">
+                 <span class="instruction-icon">🗣️</span>
+                 <span class="instruction-text">Describe the green word (<strong>Dat Tin</strong>) to your teammates without saying it.</span>
+               </li>
+               <li class="instruction-item">
+                 <span class="instruction-icon">🚫</span>
+                 <span class="instruction-text">Avoid using any of the red forbidden words (<strong>No Talk Am!</strong>) listed below.</span>
+               </li>
+               <li class="instruction-item">
+                 <span class="instruction-icon">⏳</span>
+                 <span class="instruction-text">You have 60 seconds per round. Score as many points as possible!</span>
+               </li>
+               <li class="instruction-item">
+                 <span class="instruction-icon">🏆</span>
+                 <span class="instruction-text">The team with the most points after 3 rounds is the <strong>Champion!</strong></span>
+               </li>
+             </ul>
+             <button id="play-now-btn" class="btn btn-primary btn-play-now">Play Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Selection Screen -->
+      <div id="team-selection-screen" class="screen">
+        <div class="title-screen">
+          <h1>Dat Tin <span style="font-size: 75%">🇳🇬</span></h1>
+          <div class="rules">
+             <h2 style="margin-bottom: 0;">Select Teams</h2>
+          </div>
+          <div class="team-setup-box">
+            <h2>Select Decks</h2>
+            <div class="deck-selector">
+                <div class="deck-option selected" data-deck="naija">
+                    <span>🇳🇬</span> Naija
+                </div>
+                <div class="deck-option" data-deck="global">
+                    <span>🌍</span> Global
+                </div>
+            </div>
+
+            <h2>Select number of teams to start</h2>
+            <div class="team-count-selector">
+                <button class="team-count-btn" data-teams="2">2</button>
+                <button class="team-count-btn" data-teams="3">3</button>
+                <button class="team-count-btn" data-teams="4">4</button>
+            </div>
+
+            <h2>Round Duration</h2>
+            <div class="timer-selector" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                <button class="timer-btn selected" data-time="30" style="flex:1; min-width: 45%; padding:0.75rem; border-radius:0.5rem; border:none; background:var(--green-900); color:var(--gray-300); border:2px solid var(--gray-300); font-weight:700; cursor:pointer;">
+                    Sharp Sharp <br><span style="font-size: 0.8em; font-weight: 400">30s</span>
+                </button>
+                <button class="timer-btn" data-time="60" style="flex:1; min-width: 45%; padding:0.75rem; border-radius:0.5rem; border:none; background:var(--green-900); color:var(--gray-300); border:2px solid var(--gray-300); font-weight:700; cursor:pointer;">
+                    Normal Level <br><span style="font-size: 0.8em; font-weight: 400">60s</span>
+                </button>
+                <button class="timer-btn" data-time="90" style="flex:1; min-width: 45%; padding:0.75rem; border-radius:0.5rem; border:none; background:var(--green-900); color:var(--gray-300); border:2px solid var(--gray-300); font-weight:700; cursor:pointer;">
+                    Soft Work<br><span style="font-size: 0.8em; font-weight: 400">90s</span>
+                </button>
+                <button class="timer-btn" data-time="120" style="flex:1; min-width: 45%; padding:0.75rem; border-radius:0.5rem; border:none; background:var(--green-900); color:var(--gray-300); border:2px solid var(--gray-300); font-weight:700; cursor:pointer;">
+                    African Time <br><span style="font-size: 0.8em; font-weight: 400">120s</span>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen">
+        <div id="current-team-indicator"></div>
+        <header class="game-header">
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <button id="pause-btn" class="btn-icon" style="background: none; border: none; font-size: 2rem; cursor: pointer;">⏸️</button>
+            <button id="quit-game-btn" class="btn-quit">Quit</button>
+          </div>
+          <div class="score-display">
+            <span class="label">Round Score:</span>
+            <span id="score" class="value">0</span>
+          </div>
+          <div>
+            <span id="timer" class="timer">90</span>
+          </div>
+        </header>
+
+      <!-- Pause Overlay -->
+      <div id="pause-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 3000; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <h1 style="color: var(--yellow-400); font-size: 3rem; margin-bottom: 2rem;">Oya Wait!</h1>
+        <p style="color: var(--white); font-size: 1.5rem; margin-bottom: 2rem;">Game Paused</p>
+        <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center;">
+          <button id="resume-btn" class="btn btn-primary" style="font-size: 1.5rem; padding: 1rem 3rem; max-width: 20rem;">Oya Continue ▶️</button>
+          <button id="quit-pause-btn" class="btn btn-secondary" style="font-size: 1.25rem; padding: 0.75rem 2rem; max-width: 20rem;">Quit to Menu</button>
+        </div>
+      </div>
+        <div class="card-container">
+          <div id="game-card" class="game-card">
+            <div class="card-section target">
+              <p class="label">Dat Tin</p>
+              <h2 id="target-word" class="target-word" data-splitting></h2>
+            </div>
+            <div class="card-section forbidden">
+              <p class="label">No Talk Am!</p>
+              <ul id="forbidden-words-list" class="forbidden-words-list"></ul>
+            </div>
+          </div>
+        </div>
+        <footer class="game-footer">
+          <button id="pass-btn" class="btn btn-pass">Pass</button>
+          <button id="correct-btn" class="btn btn-primary">Correct!</button>
+        </footer>
+      </div>
+
+      <!-- Round Over Screen -->
+      <div id="round-over-screen" class="screen">
+        <div class="title-screen">
+          <h1>Round Over!</h1>
+          <div id="winner-display" class="winner-display">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="trophy">🏆</div>
+            <div class="winner-banner">Current Leader</div>
+            <div id="winner-team-name" class="winner-team"></div>
+            <div id="winner-team-score" style="font-size: 1.5rem; font-weight: 600; color: var(--green-800); margin-top: 0.5rem;"></div>
+          </div>
+          <div id="scoreboard" class="scoreboard"></div>
+          <button id="next-round-btn" class="btn btn-primary" style="max-width: 20rem;"></button>
+          <button id="new-game-btn" class="btn btn-secondary" style="max-width: 20rem; margin-top: 1rem;">New Game</button>
+        </div>
+      </div>
+
+      <!-- Get Ready Countdown Screen -->
+      <div id="get-ready-screen" class="screen">
+        <div class="countdown-screen">
+          <div id="countdown-number" class="countdown-number">10</div>
+          <div id="countdown-message" class="countdown-message">Get Ready!</div>
+          <button id="skip-countdown-btn" class="btn-skip">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game Over Screen -->
+      <div id="game-over-screen" class="screen">
+        <div class="title-screen">
+          <h1>Game Over!</h1>
+          <div id="final-winner-display" class="final-winner-display">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="final-trophy">🏆</div>
+            <div class="victory-message">Champion!</div>
+            <div id="final-winner-team-name" class="final-winner-team"></div>
+            <div id="final-winner-team-score" class="final-score"></div>
+          </div>
+          <div id="final-scoreboard" class="scoreboard"></div>
+          <button id="play-again-btn" class="btn btn-primary" style="max-width: 20rem; margin-top: 1rem;">Play Again</button>
+        </div>
+      </div>
+      <!-- Review Screen -->
+      <div id="review-screen" class="screen">
+        <div class="title-screen">
+            <h1>Review Round</h1>
+            <div class="review-box" style="background: var(--green-800); padding: 1rem; border-radius: 0.5rem; width: 100%; max-width: 24rem; max-height: 60vh; overflow-y: auto;">
+                <h3 style="color: var(--yellow-400); text-align: center; margin-top: 0;">Check Scores</h3>
+                <ul id="review-list" style="list-style: none; padding: 0;">
+                    <!-- Items will be injected here -->
+                </ul>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700; margin: 1rem 0;">
+                Score: <span id="review-score" style="color: var(--yellow-400)">0</span>
+            </div>
+            <button id="confirm-score-btn" class="btn btn-primary">Confirm Score</button>
+        </div>
+      </div>
+
+      <!-- Install Prompt -->
+      <div id="install-prompt" class="install-prompt">
+        <div class="install-content">
+          <p>Wanna play offline? 🇳🇬</p>
+        </div>
+        <div class="install-actions">
+          <button id="install-btn" class="btn-install">Download</button>
+          <button id="close-install-btn" class="btn-close-install">Later</button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      !function(n,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):n.Splitting=t()}(this,function(){"use strict";var o=document,l=o.createTextNode.bind(o);function d(n,t,e){n.style.setProperty(t,e)}function f(n,t){return n.appendChild(t)}function p(n,t,e,r){var i=o.createElement("span");return t&&(i.className=t),e&&(!r&&i.setAttribute("data-"+t,e),i.textContent=e),n&&f(n,i)||i}function h(n,t){return n.getAttribute("data-"+t)}function m(n,t){return n&&0!=n.length?n.nodeName?[n]:[].slice.call(n[0].nodeName?n:(t||o).querySelectorAll(n)):[]}function u(n){for(var t=[];n--;)t[n]=[];return t}function v(n,t){n&&n.some(t)}function c(t){return function(n){return t[n]}}var a={};function n(n,t,e,r){return{by:n,depends:t,key:e,split:r}}function r(n){return function t(e,n,r){var i=r.indexOf(e);if(-1==i){r.unshift(e);var o=a[e];if(!o)throw new Error("plugin not loaded: "+e);v(o.depends,function(n){t(n,e,r)})}else{var u=r.indexOf(n);r.splice(i,1),r.splice(u,0,e)}return r}(n,0,[]).map(c(a))}function t(n){a[n.by]=n}function g(n,r,i,o,u){n.normalize();var c=[],a=document.createDocumentFragment();o&&c.push(n.previousSibling);var s=[];return m(n.childNodes).some(function(n){if(!n.tagName||n.hasChildNodes()){if(n.childNodes&&n.childNodes.length)return s.push(n),void c.push.apply(c,g(n,r,i,o,u));var t=n.wholeText||"",e=t.trim();e.length&&(" "===t[0]&&s.push(l(" ")),v(e.split(i),function(n,t){t&&u&&s.push(p(a,"whitespace"," ",u));var e=p(a,r,n);c.push(e),s.push(e)})," "===t[t.length-1]&&s.push(l(" ")))}else s.push(n)}),v(s,function(n){f(a,n)}),n.innerHTML="",f(n,a),c}var s=0;var i="words",e=n(i,s,"word",function(n){return g(n,"word",/\s+/,0,1)}),y="chars",w=n(y,[i],"char",function(n,e,t){var r=[];return v(t[i],function(n,t){r.push.apply(r,g(n,"char","",e.whitespace&&t))}),r});function b(e){var f=(e=e||{}).key;return m(e.target||"[data-splitting]").map(function(a){var s=a["🍌"];if(!e.force&&s)return s;s=a["🍌"]={el:a};var n=e.by||h(a,"splitting");n&&"true"!=n||(n=y);var t=r(n),l=function(n,t){for(var e in t)n[e]=t[e];return n}({},e);return v(t,function(n){if(n.split){var t=n.by,e=(f?"-"+f:"")+n.key,r=n.split(a,l,s);e&&(i=a,c=(u="--"+e)+"-index",v(o=r,function(n,t){Array.isArray(n)?v(n,function(n){d(n,c,t)}):d(n,c,t)}),d(i,u+"-total",o.length)),s[t]=r,a.classList.add(t)}var i,o,u,c}),a.classList.add("splitting"),s})}function N(n,t,e){var r=m(t.matching||n.children,n),i={};return v(r,function(n){var t=Math.round(n[e]);(i[t]||(i[t]=[])).push(n)}),Object.keys(i).map(Number).sort(x).map(c(i))}function x(n,t){return n-t}b.html=function(n){var t=(n=n||{}).target=p();return t.innerHTML=n.content,b(n),t.outerHTML},b.add=t;var T=n("lines",[i],"line",function(n,t,e){return N(n,{matching:e[i]},"offsetTop")}),L=n("items",s,"item",function(n,t){return m(t.matching||n.children,n)}),k=n("rows",s,"row",function(n,t){return N(n,t,"offsetTop")}),A=n("cols",s,"col",function(n,t){return N(n,t,"offsetLeft")}),C=n("grid",["rows","cols"]),M="layout",S=n(M,s,s,function(n,t){var e=t.rows=+(t.rows||h(n,"rows")||1),r=t.columns=+(t.columns||h(n,"columns")||1);if(t.image=t.image||h(n,"image")||n.currentSrc||n.src,t.image){var i=m("img",n)[0];t.image=i&&(i.currentSrc||i.src)}t.image&&d(n,"background-image","url("+t.image+")");for(var o=e*r,u=[],c=p(s,"cell-grid");o--;){var a=p(c,"cell");p(a,"cell-inner"),u.push(a)}return f(n,c),u}),H=n("cellRows",[M],"row",function(n,t,e){var r=t.rows,i=u(r);return v(e[M],function(n,t,e){i[Math.floor(t/(e.length/r))].push(n)}),i}),O=n("cellColumns",[M],"col",function(n,t,e){var r=t.columns,i=u(r);return v(e[M],function(n,t){i[t%r].push(n)}),i}),j=n("cells",["cellRows","cellColumns"],"cell",function(n,t,e){return e[M]});return t(e),t(w),t(T),t(L),t(k),t(A),t(C),t(S),t(H),t(O),t(j),b});
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // --- DATA ---
+        let ROUND_DURATION = 30; // Changed to let, default 30s
+        const COUNTDOWN_DURATION = 10;
+        const gameCards = [
+          { targetWord: 'Jollof Rice', forbiddenWords: ['Party', 'Tomato', 'Orange'] }, { targetWord: 'Nollywood', forbiddenWords: ['Movie', 'Film', 'Actor'] }, { targetWord: 'Lagos', forbiddenWords: ['Traffic', 'City', 'Eko'] }, { targetWord: 'Fela Kuti', forbiddenWords: ['Music', 'Afrobeat', 'Saxophone'] }, { targetWord: 'Suya', forbiddenWords: ['Meat', 'Skewer', 'Spice'] }, { targetWord: 'Agbada', forbiddenWords: ['Buba', 'Sokoto', 'Grand'] }, { targetWord: 'Harmattan', forbiddenWords: ['Dry', 'Season', 'Dust'] }, { targetWord: 'Okada', forbiddenWords: ['Motorcycle', 'Bike', 'Transport'] }, { targetWord: 'Puff Puff', forbiddenWords: ['Dough', 'Snack', 'Fried'] }, { targetWord: 'Chin Chin', forbiddenWords: ['Snack', 'Hard', 'Flour'] }, { targetWord: 'Eba', forbiddenWords: ['Garri', 'Swallow', 'Soup'] }, { targetWord: 'Pounded Yam', forbiddenWords: ['Iyan', 'Mortar', 'Tuber'] }, { targetWord: 'Davido', forbiddenWords: ['OBO', 'Music', '30BG'] }, { targetWord: 'Wizkid', forbiddenWords: ['Starboy', 'Music', 'Ojuelegba'] }, { targetWord: 'Burna Boy', forbiddenWords: ['African Giant', 'Odogwu', 'Grammy'] }, { targetWord: 'Super Eagles', forbiddenWords: ['Football', 'Team', 'Green'] }, { targetWord: 'Wole Soyinka', forbiddenWords: ['Nobel', 'Author', 'Playwright'] }, { targetWord: 'Chimamanda Adichie', forbiddenWords: ['Author', 'Feminist', 'Writer'] }, { targetWord: 'Danfo', forbiddenWords: ['Bus', 'Yellow', 'Conductor'] }, { targetWord: 'Pidgin English', forbiddenWords: ['Language', 'Broken', 'Speak'] }, { targetWord: 'Aso Rock', forbiddenWords: ['President', 'Abuja', 'Villa'] }, { targetWord: 'Zuma Rock', forbiddenWords: ['Abuja', 'Face', 'Monolith'] }, { targetWord: 'Gele', forbiddenWords: ['Head-tie', 'Fabric', 'Women'] }, { targetWord: 'Owambe', forbiddenWords: ['Party', 'Celebration', 'Spray'] }, { targetWord: 'Boli', forbiddenWords: ['Plantain', 'Roasted', 'Fish'] }, { targetWord: 'Akara', forbiddenWords: ['Beans', 'Cake', 'Fried'] }, { targetWord: 'Moi Moi', forbiddenWords: ['Beans', 'Pudding', 'Steamed'] }, { targetWord: 'Egusi', forbiddenWords: ['Soup', 'Melon', 'Seed'] }, { targetWord: 'Keke Napep', forbiddenWords: ['Tricycle', 'Yellow', 'Transport'] }, { targetWord: 'Shea Butter', forbiddenWords: ['Ori', 'Cream', 'Skin'] }, { targetWord: 'Palm Wine', forbiddenWords: ['Drink', 'Tree', 'Tapper'] }, { targetWord: 'Ankara', forbiddenWords: ['Fabric', 'Wax', 'Print'] }, { targetWord: 'Talking Drum', forbiddenWords: ['Gangan', 'Instrument', 'Yoruba'] }, { targetWord: 'NEPA', forbiddenWords: ['Light', 'Power', 'Blackout'] }, { targetWord: 'Go-slow', forbiddenWords: ['Traffic', 'Jam', 'Hold-up'] }, { targetWord: 'Oga', forbiddenWords: ['Boss', 'Master', 'Chief'] }, { targetWord: 'Wahala', forbiddenWords: ['Trouble', 'Problem', 'Stress'] }, { targetWord: 'Sisi', forbiddenWords: ['Girl', 'Lady', 'Young'] }, { targetWord: 'Buka', forbiddenWords: ['Restaurant', 'Food', 'Local'] }, { targetWord: 'Garri', forbiddenWords: ['Cassava', 'Flakes', 'Drink'] }, { targetWord: 'Iro and Buba', forbiddenWords: ['Wrapper', 'Blouse', 'Yoruba'] }, { targetWord: 'Shaku Shaku', forbiddenWords: ['Dance', 'Legwork', 'Zanku'] }, { targetWord: 'Aliko Dangote', forbiddenWords: ['Richest', 'Man', 'Cement'] }, { targetWord: 'Nkwobi', forbiddenWords: ['Cowleg', 'Spicy', 'Igbo'] }, { targetWord: 'Abacha', forbiddenWords: ['African Salad', 'Cassava', 'Ugba'] }, { targetWord: 'Zobo', forbiddenWords: ['Drink', 'Red', 'Hibiscus'] }, { targetWord: 'Tiwa Savage', forbiddenWords: ['Queen', 'Afrobeats', 'Singer'] }, { targetWord: 'Yemi Alade', forbiddenWords: ['Mama Africa', 'Johnny', 'Female'] }, { targetWord: 'Olumo Rock', forbiddenWords: ['Abeokuta', 'Mountain', 'Egba'] }, { targetWord: 'Afrobeats', forbiddenWords: ['Music', 'Genre', 'Fela'] },
+          { targetWord: 'IJGB', forbiddenWords: ['Abroad', 'Returnee', 'Diaspora'] }, { targetWord: 'Detty December', forbiddenWords: ['Party', 'December', 'Lagos'] }, { targetWord: 'Nepo Baby', forbiddenWords: ['Privilege', 'Parents', 'Famous'] }, { targetWord: 'Lapo Baby', forbiddenWords: ['Lekki', 'Rich', 'Spoiled'] }, { targetWord: 'Rema', forbiddenWords: ['Calm Down', 'Mavin', 'Benin'] }, { targetWord: 'Asake', forbiddenWords: ['Mr Money', 'YBNL', 'Olamide'] }, { targetWord: 'Tems', forbiddenWords: ['Essence', 'Grammy', 'Female'] }, { targetWord: 'Olamide', forbiddenWords: ['YBNL', 'Baddo', 'Indigenous'] }, { targetWord: 'Ayra Starr', forbiddenWords: ['Rush', 'Mavin', 'Young'] }, { targetWord: 'Fireboy DML', forbiddenWords: ['Peru', 'YBNL', 'Jealous'] }, { targetWord: 'Omah Lay', forbiddenWords: ['Godly', 'Port Harcourt', 'Singer'] }, { targetWord: 'Simi', forbiddenWords: ['Duduke', 'Adekunle', 'Voice'] }, { targetWord: 'Adekunle Gold', forbiddenWords: ['Orente', 'Simi', 'Highlife'] }, { targetWord: 'Falz', forbiddenWords: ['Lawyer', 'Funny', 'Bop Daddy'] }, { targetWord: 'Mr Eazi', forbiddenWords: ['Leg Over', 'Banku', 'Temi'] }, { targetWord: 'Tekno', forbiddenWords: ['Pana', 'Skeletun', 'Producer'] }, { targetWord: 'Kizz Daniel', forbiddenWords: ['Buga', 'Woju', 'Cough'] }, { targetWord: 'Seyi Vibez', forbiddenWords: ['Street', 'Singer', 'Fuji'] }, { targetWord: 'Zinoleesky', forbiddenWords: ['Marlian', 'Naira', 'Singer'] }, { targetWord: 'Mohbad', forbiddenWords: ['Marlian', 'Singer', 'Late'] }, { targetWord: 'Naira Marley', forbiddenWords: ['Marlian', 'Soapy', 'Controversy'] }, { targetWord: 'Zlatan', forbiddenWords: ['Zanku', 'Rapper', 'Legwork'] }, { targetWord: 'Bella Shmurda', forbiddenWords: ['Cash App', 'Singer', 'Street'] }, { targetWord: 'Ruger', forbiddenWords: ['Bounce', 'Eyepatch', 'Singer'] }, { targetWord: 'BNXN', forbiddenWords: ['Buju', 'Finesse', 'Singer'] }, { targetWord: 'Victony', forbiddenWords: ['Wheelchair', 'Singer', 'Soweto'] }, { targetWord: 'Joeboy', forbiddenWords: ['Baby', 'emPawa', 'Alcohol'] }, { targetWord: 'Oxlade', forbiddenWords: ['Away', 'Singer', 'KU LO SA'] }, { targetWord: 'DJ Cuppy', forbiddenWords: ['Pink', 'Otedola', 'DJ'] }, { targetWord: 'Mayorkun', forbiddenWords: ['Mayor', 'Of Lagos', 'Geng'] }, { targetWord: 'Peruzzi', forbiddenWords: ['Majesty', 'DMW', 'Songwriter'] }, { targetWord: 'Blaqbonez', forbiddenWords: ['Sex Over Love', 'Rapper', 'Chocolate City'] }, { targetWord: 'Vector', forbiddenWords: ['Viper', 'Rapper', 'Lafiaji'] }, { targetWord: 'MI Abaga', forbiddenWords: ['Chocolate City', 'Rapper', 'Chairman'] }, { targetWord: 'Ice Prince', forbiddenWords: ['Oleku', 'Rapper', 'Jos'] }, { targetWord: 'Jesse Jagz', forbiddenWords: ['Chocolate City', 'Rapper', 'Jos'] }, { targetWord: 'Ycee', forbiddenWords: ['Juice', 'Rapper', 'Tinny'] }, { targetWord: 'Phyno', forbiddenWords: ['Igbo', 'Rapper', 'Enugu'] }, { targetWord: 'Flavour', forbiddenWords: ['Highlife', 'Nwa Baby', 'Enugu'] }, { targetWord: 'Patoranking', forbiddenWords: ['Reggae', 'Dancehall', 'Alubarika'] }, { targetWord: 'Timaya', forbiddenWords: ['Dem Mama', 'Plantain', 'Bayelsa'] }, { targetWord: '2Baba', forbiddenWords: ['African Queen', 'Legend', 'Plantashun'] }, { targetWord: 'Don Jazzy', forbiddenWords: ['Mavin', 'Producer', 'Mohits'] }, { targetWord: 'ID Cabasa', forbiddenWords: ['Producer', 'Coded Tunes', 'Olamide'] }, { targetWord: 'Sarz', forbiddenWords: ['Beat', 'Producer', 'Paigon'] }, { targetWord: 'Pheelz', forbiddenWords: ['Producer', 'Finesse', 'BNXN'] }, { targetWord: 'Young Jonn', forbiddenWords: ['Producer', 'Dada', 'Chocolate City'] }, { targetWord: 'Rexxie', forbiddenWords: ['Producer', 'Grammy', 'KPK'] }, { targetWord: 'P-Square', forbiddenWords: ['Twins', 'Peter', 'Paul'] }, { targetWord: 'Psquare', forbiddenWords: ['Personally', 'Twins', 'Breakup'] }, { targetWord: 'D\'banj', forbiddenWords: ['Kokomaster', 'Oliver Twist', 'Harmonica'] }, { targetWord: 'Banky W', forbiddenWords: ['EME', 'Yes/No', 'Actor'] }, { targetWord: 'Wande Coal', forbiddenWords: ['Bumper', 'Mushin', '2 Match'] }, { targetWord: 'Skales', forbiddenWords: ['Shake Body', 'EME', 'Rapper'] }, { targetWord: '9ice', forbiddenWords: ['Gongo Aso', 'Ancestor', 'Ogara'] }, { targetWord: 'Ruggedman', forbiddenWords: ['Ruggedy', 'Baba', 'Rapper'] }, { targetWord: 'Eedris Abdulkareem', forbiddenWords: ['Jaga Jaga', 'Rapper', '50 Cent'] }, { targetWord: 'Tony Tetuila', forbiddenWords: ['My Car', 'Remedies', 'Ondo'] }, { targetWord: 'Plantashun Boiz', forbiddenWords: ['2Baba', 'Blackface', 'Faze'] }, { targetWord: 'Styl-Plus', forbiddenWords: ['Olufunmi', 'Group', 'Runaway'] }, { targetWord: 'Bracket', forbiddenWords: ['Yori Yori', 'Duo', 'Group'] }, { targetWord: 'PJ Morton', forbiddenWords: ['Maroon 5', 'America', 'Lagos'] }, { targetWord: 'Bez', forbiddenWords: ['That Stupid Song', 'Alternative', 'Singer'] }, { targetWord: 'Johnny Drille', forbiddenWords: ['Mavin', 'Guitar', 'Folk'] }, { targetWord: 'Chike', forbiddenWords: ['Running', 'Voice', 'Project Fame'] }, { targetWord: 'Ladipoe', forbiddenWords: ['Mavin', 'Rapper', 'Feeling'] }, { targetWord: 'A-Q', forbiddenWords: ['Rapper', 'Chocolate City', 'MI'] }, { targetWord: 'Ckay', forbiddenWords: ['Love Nwantiti', 'Producer', 'Chocolate City'] }, { targetWord: 'Crayon', forbiddenWords: ['Mavin', 'Ijo', 'Young'] }, { targetWord: 'Bayanni', forbiddenWords: ['Mavin', 'Ta Ta Ta', 'Young'] }, { targetWord: 'Magixx', forbiddenWords: ['Mavin', 'Love', 'Young'] }, { targetWord: 'Boy Spyce', forbiddenWords: ['Mavin', 'Innocent', 'Young'] }, { targetWord: 'Shallipopi', forbiddenWords: ['Plutomania', 'Benin', 'Elon Musk'] }, { targetWord: 'Portable', forbiddenWords: ['Zazoo', 'Ika', 'Controversial'] }, { targetWord: 'Poco Lee', forbiddenWords: ['Dancer', 'Hype', 'Zlatan'] }, { targetWord: 'Kaffy', forbiddenWords: ['Dancer', 'Choreographer', 'Guinness'] }, { targetWord: 'Shank Comics', forbiddenWords: ['Instagram', 'Comedian', 'Character'] }, { targetWord: 'Mr Macaroni', forbiddenWords: ['Freaky', 'Twitter', 'Comedian'] }, { targetWord: 'Sabinus', forbiddenWords: ['Something Hooge', 'Mr Funny', 'Comedian'] }, { targetWord: 'Broda Shaggi', forbiddenWords: ['Comedian', 'Mushin', 'Character'] }, { targetWord: 'Sydney Talker', forbiddenWords: ['Comedian', 'Towel', 'Village'] }, { targetWord: 'Mark Angel', forbiddenWords: ['Comedy', 'Success', 'Emmanuella'] }, { targetWord: 'Emmanuella', forbiddenWords: ['Child', 'Comedian', 'This is not my real face'] }, { targetWord: 'Taaooma', forbiddenWords: ['Comedian', 'Mother', 'Characters'] }, { targetWord: 'Lasisi Elenu', forbiddenWords: ['Snap', 'Filter', 'Comedian'] }, { targetWord: 'Officer Woos', forbiddenWords: ['Police', 'Comedy', 'Character'] }, { targetWord: 'Tunde Ednut', forbiddenWords: ['Instagram', 'Blogger', 'Singer'] }, { targetWord: 'Linda Ikeji', forbiddenWords: ['Blog', 'Gossip', 'Blogger'] }, { targetWord: 'Noble Igwe', forbiddenWords: ['Media', 'Influencer', '360Nobs'] }, { targetWord: 'Ebuka', forbiddenWords: ['BBNaija', 'Host', 'Agbada'] }, { targetWord: 'Laycon', forbiddenWords: ['BBNaija', 'Rapper', 'Winner'] }, { targetWord: 'Mercy Eke', forbiddenWords: ['BBNaija', 'Pepper Dem', 'Winner'] }, { targetWord: 'Phyna', forbiddenWords: ['BBNaija', 'Winner', 'Level Up'] }, { targetWord: 'Ilebaye', forbiddenWords: ['BBNaija', 'Gen Z', 'All Stars'] }, { targetWord: 'Whitemoney', forbiddenWords: ['BBNaija', 'Cook', 'Selense'] }, { targetWord: 'Pere', forbiddenWords: ['BBNaija', 'Military', 'General'] }, { targetWord: 'Cross', forbiddenWords: ['BBNaija', 'Fitness', 'Body'] }, { targetWord: 'BBNaija', forbiddenWords: ['Reality', 'Show', 'House'] }, { targetWord: 'Gulder Ultimate Search', forbiddenWords: ['Reality', 'Show', 'Jungle'] }, { targetWord: 'The Johnsons', forbiddenWords: ['Series', 'TV', 'Family'] }, { targetWord: 'Jenifa\'s Diary', forbiddenWords: ['Funke', 'Series', 'Comedy'] }, { targetWord: 'Funke Akindele', forbiddenWords: ['Jenifa', 'Actress', 'Box Office'] }, { targetWord: 'Genevieve Nnaji', forbiddenWords: ['Actress', 'Lionheart', 'Beautiful'] }, { targetWord: 'Ramsey Nouah', forbiddenWords: ['Actor', 'Lover Boy', 'Handsome'] }, { targetWord: 'RMD', forbiddenWords: ['Richard Mofe-Damijo', 'Actor', 'Ageless'] }, { targetWord: 'Omotola Jalade', forbiddenWords: ['Actress', 'Omosexy', 'Beautiful'] }, { targetWord: 'Jim Iyke', forbiddenWords: ['Actor', 'Bad Boy', 'Nollywood'] }, { targetWord: 'Mercy Johnson', forbiddenWords: ['Actress', 'Comedy', 'Cry'] }, { targetWord: 'Rita Dominic', forbiddenWords: ['Actress', 'Beautiful', 'Nollywood'] }, { targetWord: 'Ini Edo', forbiddenWords: ['Actress', 'Beautiful', 'Nollywood'] }, { targetWord: 'Kate Henshaw', forbiddenWords: ['Actress', 'Fitness', 'Ageless'] }, { targetWord: 'Sola Sobowale', forbiddenWords: ['King of Boys', 'Toyin Tomato', 'Actress'] }, { targetWord: 'King of Boys', forbiddenWords: ['Eniola', 'Kemi', 'Movie'] }, { targetWord: 'The Wedding Party', forbiddenWords: ['Movie', 'Wedding', 'Comedy'] }, { targetWord: 'Sugar Rush', forbiddenWords: ['Movie', 'Heist', 'EFCC'] }, { targetWord: 'Gangs of Lagos', forbiddenWords: ['Movie', 'Crime', 'Amazon'] }, { targetWord: 'Blood Sisters', forbiddenWords: ['Series', 'Netflix', 'Wedding'] }, { targetWord: 'Shanty Town', forbiddenWords: ['Series', 'Netflix', 'Crime'] }, { targetWord: 'Far From Home', forbiddenWords: ['Series', 'Netflix', 'School'] }, { targetWord: 'Anikulapo', forbiddenWords: ['Movie', 'Netflix', 'Kunle Afolayan'] }, { targetWord: 'Living in Bondage', forbiddenWords: ['Classic', 'Movie', 'Occult'] }, { targetWord: 'Aki and Pawpaw', forbiddenWords: ['Comedy', 'Duo', 'Small'] }, { targetWord: 'Osita Iheme', forbiddenWords: ['Pawpaw', 'Actor', 'Small'] }, { targetWord: 'Chinedu Ikedieze', forbiddenWords: ['Aki', 'Actor', 'Small'] }, { targetWord: 'Mr Ibu', forbiddenWords: ['Comedian', 'Actor', 'Belly'] }, { targetWord: 'Charles Inojie', forbiddenWords: ['Actor', 'Comedian', 'The Johnsons'] }, { targetWord: 'Sam Loco Efe', forbiddenWords: ['Actor', 'Legend', 'Late'] }, { targetWord: 'Pete Edochie', forbiddenWords: ['Igbo', 'Actor', 'Legend'] }, { targetWord: 'Kanayo O. Kanayo', forbiddenWords: ['Sacrifice', 'Actor', 'Meme'] }, { targetWord: 'Okrika', forbiddenWords: ['Bend Down', 'Clothes', 'Second Hand'] }, { targetWord: 'Bend Down Select', forbiddenWords: ['Okrika', 'Thrift', 'Clothes'] }, { targetWord: 'Tokunbo', forbiddenWords: ['Foreign', 'Used', 'Car'] }, { targetWord: 'Molue', forbiddenWords: ['Yellow', 'Bus', 'Old'] }, { targetWord: 'BRT', forbiddenWords: ['Bus', 'Blue', 'Lagos'] }, { targetWord: 'Uber', forbiddenWords: ['Ride', 'App', 'Car'] }, { targetWord: 'Bolt', forbiddenWords: ['Ride', 'App', 'Cheap'] }, { targetWord: 'InDriver', forbiddenWords: ['Ride', 'Negotiate', 'App'] }, { targetWord: 'Opay', forbiddenWords: ['Bike', 'Green', 'App'] }, { targetWord: 'Gokada', forbiddenWords: ['Bike', 'App', 'Banned'] }, { targetWord: 'Lekki Toll Gate', forbiddenWords: ['Bridge', 'Payment', 'EndSARS'] }, { targetWord: 'Third Mainland Bridge', forbiddenWords: ['Long', 'Lagos', 'Bridge'] }, { targetWord: 'Eko Bridge', forbiddenWords: ['Bridge', 'Lagos', 'Island'] }, { targetWord: 'Computer Village', forbiddenWords: ['Ikeja', 'Electronics', 'Phones'] }, { targetWord: 'Balogun Market', forbiddenWords: ['Lagos Island', 'Fabric', 'Crowded'] }, { targetWord: 'Alaba International', forbiddenWords: ['Market', 'Electronics', 'Ojo'] }, { targetWord: 'Idumota', forbiddenWords: ['Market', 'Lagos', 'Island'] }, { targetWord: 'Yaba', forbiddenWords: ['Market', 'Tech', 'Lagos'] }, { targetWord: 'Surulere', forbiddenWords: ['Lagos', 'Stadium', 'Area'] }, { targetWord: 'Ikeja City Mall', forbiddenWords: ['Shopping', 'Mall', 'Ikeja'] }, { targetWord: 'Palms Mall', forbiddenWords: ['Shopping', 'Lekki', 'Mall'] }, { targetWord: 'Jara', forbiddenWords: ['Extra', 'Bonus', 'Free'] }, { targetWord: 'Aso Ebi', forbiddenWords: ['Uniform', 'Party', 'Fabric'] }, { targetWord: 'Spraying Money', forbiddenWords: ['Naira', 'Dance', 'Party'] }, { targetWord: 'Small Chops', forbiddenWords: ['Party', 'Snacks', 'Assorted'] }, { targetWord: 'Amala', forbiddenWords: ['Yam Flour', 'Ewedu', 'Swallow'] }, { targetWord: 'Ewedu', forbiddenWords: ['Soup', 'Green', 'Slimy'] }, { targetWord: 'Gbegiri', forbiddenWords: ['Soup', 'Beans', 'Yellow'] }, { targetWord: 'Ofada Rice', forbiddenWords: ['Local', 'Rice', 'Stew'] }, { targetWord: 'Ayamase', forbiddenWords: ['Ofada', 'Stew', 'Green'] }, { targetWord: 'Pepper Soup', forbiddenWords: ['Hot', 'Spicy', 'Goat'] }, { targetWord: 'Asun', forbiddenWords: ['Goat', 'Spicy', 'Pepper'] }, { targetWord: 'Isi Ewu', forbiddenWords: ['Goat', 'Head', 'Igbo'] }, { targetWord: 'Nkwobi', forbiddenWords: ['Cowleg', 'Spicy', 'Igbo'] }, { targetWord: 'Catfish', forbiddenWords: ['Fish', 'Pepper Soup', 'Whiskers'] }, { targetWord: 'Point and Kill', forbiddenWords: ['Fresh', 'Fish', 'Select'] }, { targetWord: 'Agege Bread', forbiddenWords: ['White', 'Bread', 'Soft'] }, { targetWord: 'Indomie', forbiddenWords: ['Noodles', 'Instant', 'Blue'] }, { targetWord: 'Gala', forbiddenWords: ['Sausage', 'Roll', 'Snack'] }, { targetWord: 'La Casera', forbiddenWords: ['Apple', 'Drink', 'Green'] }, { targetWord: 'Ribena', forbiddenWords: ['Blackcurrant', 'Drink', 'Purple'] }, { targetWord: 'Maltina', forbiddenWords: ['Malt', 'Drink', 'Energy'] }, { targetWord: 'Fura da Nono', forbiddenWords: ['Millet', 'Milk', 'Hausa'] }, { targetWord: 'Kunun', forbiddenWords: ['Drink', 'Millet', 'White'] }, { targetWord: 'Kilishi', forbiddenWords: ['Meat', 'Dried', 'Hausa'] }, { targetWord: 'Dankwa', forbiddenWords: ['Sugar Cane', 'Snack', 'Sweet'] }, { targetWord: 'Groundnut', forbiddenWords: ['Peanut', 'Nut', 'Roasted'] }, { targetWord: 'Coconut', forbiddenWords: ['Fruit', 'White', 'Water'] }, { targetWord: 'Garden Egg', forbiddenWords: ['Vegetable', 'Bitter', 'White'] }, { targetWord: 'Ugwu', forbiddenWords: ['Vegetable', 'Green', 'Leaves'] }, { targetWord: 'Bitter Leaf', forbiddenWords: ['Vegetable', 'Soup', 'Green'] }, { targetWord: 'Stockfish', forbiddenWords: ['Fish', 'Dry', 'Hard'] }, { targetWord: 'Crayfish', forbiddenWords: ['Seafood', 'Powder', 'Soup'] }, { targetWord: 'Locust Beans', forbiddenWords: ['Iru', 'Seasoning', 'Smell'] }, { targetWord: 'Maggi', forbiddenWords: ['Cube', 'Seasoning', 'Taste'] }, { targetWord: 'Yaji', forbiddenWords: ['Spice', 'Powder', 'Suya'] },
+          // --- GLOBAL DECK ---
+  { category: 'global', targetWord: 'iPhone', forbiddenWords: ['Apple', 'Phone', 'Siri'] },
+  { category: 'global', targetWord: 'Netflix', forbiddenWords: ['Movie', 'Stream', 'Chill'] },
+  { category: 'global', targetWord: 'WhatsApp', forbiddenWords: ['Chat', 'Message', 'Status'] },
+  { category: 'global', targetWord: 'TikTok', forbiddenWords: ['Video', 'Dance', 'China'] },
+  { category: 'global', targetWord: 'Instagram', forbiddenWords: ['Photo', 'Story', 'Meta'] },
+  { category: 'global', targetWord: 'Twitter / X', forbiddenWords: ['Tweet', 'Elon Musk', 'Bird'] },
+  { category: 'global', targetWord: 'Snapchat', forbiddenWords: ['Filter', 'Ghost', 'Streak'] },
+  { category: 'global', targetWord: 'YouTube', forbiddenWords: ['Video', 'Subscribe', 'Google'] },
+  { category: 'global', targetWord: 'Google', forbiddenWords: ['Search', 'Engine', 'Android'] },
+  { category: 'global', targetWord: 'Amazon', forbiddenWords: ['Shopping', 'Jeff Bezos', 'Prime'] },
+  { category: 'global', targetWord: 'Uber', forbiddenWords: ['Taxi', 'Ride', 'Driver'] },
+  { category: 'global', targetWord: 'Tesla', forbiddenWords: ['Car', 'Electric', 'Elon'] },
+  { category: 'global', targetWord: 'PlayStation', forbiddenWords: ['Sony', 'Game', 'Console'] },
+  { category: 'global', targetWord: 'FIFA', forbiddenWords: ['Football', 'Game', 'EA Sports'] },
+  { category: 'global', targetWord: 'Call of Duty', forbiddenWords: ['War', 'Shooting', 'Game'] },
+  { category: 'global', targetWord: 'Candy Crush', forbiddenWords: ['Game', 'Phone', 'Sweet'] },
+  { category: 'global', targetWord: 'Bitcoin', forbiddenWords: ['Crypto', 'Money', 'Digital'] },
+  { category: 'global', targetWord: 'AI / ChatGPT', forbiddenWords: ['Robot', 'Smart', 'OpenAI'] },
+  { category: 'global', targetWord: 'Wi-Fi', forbiddenWords: ['Internet', 'Connect', 'Wireless'] },
+  { category: 'global', targetWord: 'Bluetooth', forbiddenWords: ['Connect', 'Pair', 'Wireless'] },
+  { category: 'global', targetWord: 'Laptop', forbiddenWords: ['Computer', 'Portable', 'Keyboard'] },
+  { category: 'global', targetWord: 'Charger', forbiddenWords: ['Phone', 'Power', 'Battery'] },
+  { category: 'global', targetWord: 'Power Bank', forbiddenWords: ['Charge', 'Battery', 'Portable'] },
+  { category: 'global', targetWord: 'Earbuds / AirPods', forbiddenWords: ['Music', 'Ear', 'Wireless'] },
+  { category: 'global', targetWord: 'Selfie', forbiddenWords: ['Photo', 'Picture', 'Face'] },
+  
+  { category: 'global', targetWord: 'Michael Jackson', forbiddenWords: ['King of Pop', 'Dance', 'Thriller'] },
+  { category: 'global', targetWord: 'Beyoncé', forbiddenWords: ['Queen B', 'Jay-Z', 'Singer'] },
+  { category: 'global', targetWord: 'Rihanna', forbiddenWords: ['Umbrella', 'Singer', 'Barbados'] },
+  { category: 'global', targetWord: 'Drake', forbiddenWords: ['Rapper', 'Canada', 'Hotline Bling'] },
+  { category: 'global', targetWord: 'Justin Bieber', forbiddenWords: ['Baby', 'Singer', 'Canada'] },
+  { category: 'global', targetWord: 'Chris Brown', forbiddenWords: ['Singer', 'Dance', 'Loyal'] },
+  { category: 'global', targetWord: 'Nicki Minaj', forbiddenWords: ['Rapper', 'Pink', 'Barbie'] },
+  { category: 'global', targetWord: 'Cardi B', forbiddenWords: ['Rapper', 'WAP', 'Offset'] },
+  { category: 'global', targetWord: 'Kanye West', forbiddenWords: ['Ye', 'Kim', 'Rapper'] },
+  { category: 'global', targetWord: 'Jay-Z', forbiddenWords: ['Rapper', 'Beyoncé', 'Billionaire'] },
+  { category: 'global', targetWord: 'Eminem', forbiddenWords: ['Rapper', 'Slim Shady', 'White'] },
+  { category: 'global', targetWord: '50 Cent', forbiddenWords: ['Rapper', 'In Da Club', 'Candy Shop'] },
+  { category: 'global', targetWord: 'Ed Sheeran', forbiddenWords: ['Singer', 'Shape of You', 'Ginger'] },
+  { category: 'global', targetWord: 'Adele', forbiddenWords: ['Singer', 'Hello', 'British'] },
+  { category: 'global', targetWord: 'Bob Marley', forbiddenWords: ['Reggae', 'Jamaica', 'Weed'] },
+  { category: 'global', targetWord: 'Celine Dion', forbiddenWords: ['Titanic', 'Singer', 'Heart'] },
+  { category: 'global', targetWord: 'Whitney Houston', forbiddenWords: ['Singer', 'Bodyguard', 'I Will Always Love You'] },
+  { category: 'global', targetWord: 'Mariah Carey', forbiddenWords: ['Singer', 'Christmas', 'High Note'] },
+  { category: 'global', targetWord: 'Usher', forbiddenWords: ['Singer', 'Yeah', 'Confessions'] },
+  
+  { category: 'global', targetWord: 'Lionel Messi', forbiddenWords: ['Football', 'Argentina', 'GOAT'] },
+  { category: 'global', targetWord: 'Cristiano Ronaldo', forbiddenWords: ['CR7', 'Portugal', 'Football'] },
+  { category: 'global', targetWord: 'Neymar', forbiddenWords: ['Brazil', 'Football', 'PSG'] },
+  { category: 'global', targetWord: 'Kylian Mbappé', forbiddenWords: ['France', 'Football', 'Speed'] },
+  { category: 'global', targetWord: 'Manchester United', forbiddenWords: ['Red Devils', 'Club', 'Old Trafford'] },
+  { category: 'global', targetWord: 'Chelsea', forbiddenWords: ['Blues', 'London', 'Club'] },
+  { category: 'global', targetWord: 'Arsenal', forbiddenWords: ['Gunners', 'London', 'Club'] },
+  { category: 'global', targetWord: 'Liverpool', forbiddenWords: ['Reds', 'Anfield', 'Club'] },
+  { category: 'global', targetWord: 'Barcelona', forbiddenWords: ['Spain', 'Club', 'Messi'] },
+  { category: 'global', targetWord: 'Real Madrid', forbiddenWords: ['Spain', 'Club', 'White'] },
+  { category: 'global', targetWord: 'LeBron James', forbiddenWords: ['Basketball', 'NBA', 'King'] },
+  { category: 'global', targetWord: 'Michael Jordan', forbiddenWords: ['Basketball', 'NBA', 'Bulls'] },
+  { category: 'global', targetWord: 'Serena Williams', forbiddenWords: ['Tennis', 'Champion', 'Sister'] },
+  { category: 'global', targetWord: 'Usain Bolt', forbiddenWords: ['Runner', 'Fast', 'Jamaica'] },
+  { category: 'global', targetWord: 'Anthony Joshua', forbiddenWords: ['Boxing', 'Nigeria', 'Champ'] },
+  { category: 'global', targetWord: 'World Cup', forbiddenWords: ['Football', 'FIFA', 'Trophy'] },
+  { category: 'global', targetWord: 'Olympics', forbiddenWords: ['Games', 'Gold', 'Medal'] },
+  { category: 'global', targetWord: 'Premier League', forbiddenWords: ['EPL', 'England', 'Football'] },
+  { category: 'global', targetWord: 'Champions League', forbiddenWords: ['UEFA', 'Football', 'Europe'] },
+
+  { category: 'global', targetWord: 'Black Panther', forbiddenWords: ['Wakanda', 'Marvel', 'Chadwick'] },
+  { category: 'global', targetWord: 'Avengers', forbiddenWords: ['Marvel', 'Superheroes', 'Thanos'] },
+  { category: 'global', targetWord: 'Spider-Man', forbiddenWords: ['Web', 'Peter Parker', 'Marvel'] },
+  { category: 'global', targetWord: 'Batman', forbiddenWords: ['DC', 'Joker', 'Gotham'] },
+  { category: 'global', targetWord: 'Superman', forbiddenWords: ['DC', 'Clark Kent', 'Kryptonite'] },
+  { category: 'global', targetWord: 'Wonder Woman', forbiddenWords: ['DC', 'Amazon', 'Hero'] },
+  { category: 'global', targetWord: 'Game of Thrones', forbiddenWords: ['Dragon', 'Winter', 'Series'] },
+  { category: 'global', targetWord: 'Squid Game', forbiddenWords: ['Netflix', 'Korea', 'Green Light'] },
+  { category: 'global', targetWord: 'Money Heist', forbiddenWords: ['Bella Ciao', 'Professor', 'Netflix'] },
+  { category: 'global', targetWord: 'Bridgerton', forbiddenWords: ['Netflix', 'Period', 'Romance'] },
+  { category: 'global', targetWord: 'Coming to America', forbiddenWords: ['Eddie Murphy', 'Prince', 'Zamunda'] },
+  { category: 'global', targetWord: 'The Lion King', forbiddenWords: ['Simba', 'Disney', 'Mufasa'] },
+  { category: 'global', targetWord: 'Frozen', forbiddenWords: ['Elsa', 'Let It Go', 'Disney'] },
+  { category: 'global', targetWord: 'Tom & Jerry', forbiddenWords: ['Cat', 'Mouse', 'Cartoon'] },
+  { category: 'global', targetWord: 'SpongeBob', forbiddenWords: ['SquarePants', 'Patrick', 'Cartoon'] },
+  { category: 'global', targetWord: 'Mickey Mouse', forbiddenWords: ['Disney', 'Mouse', 'Ears'] },
+  { category: 'global', targetWord: 'James Bond', forbiddenWords: ['007', 'Spy', 'Movie'] },
+  { category: 'global', targetWord: 'Harry Potter', forbiddenWords: ['Wizard', 'Hogwarts', 'Magic'] },
+  { category: 'global', targetWord: 'Titanic', forbiddenWords: ['Ship', 'Iceberg', 'Jack'] },
+  { category: 'global', targetWord: 'Avatar', forbiddenWords: ['Blue', 'Movie', 'Pandora'] },
+  { category: 'global', targetWord: 'Barbie', forbiddenWords: ['Doll', 'Pink', 'Movie'] },
+  { category: 'global', targetWord: 'Will Smith', forbiddenWords: ['Actor', 'Slap', 'Fresh Prince'] },
+  { category: 'global', targetWord: 'Dwayne Johnson', forbiddenWords: ['The Rock', 'Actor', 'Wrestler'] },
+  { category: 'global', targetWord: 'Kevin Hart', forbiddenWords: ['Comedian', 'Short', 'Funny'] },
+  { category: 'global', targetWord: 'Leonardo DiCaprio', forbiddenWords: ['Actor', 'Titanic', 'Oscar'] },
+  { category: 'global', targetWord: 'Zendaya', forbiddenWords: ['Actress', 'Spider-Man', 'Euphoria'] },
+  { category: 'global', targetWord: 'Kim Kardashian', forbiddenWords: ['Kanye', 'Reality', 'Famous'] },
+
+  { category: 'global', targetWord: 'Coca-Cola', forbiddenWords: ['Soda', 'Drink', 'Red'] },
+  { category: 'global', targetWord: 'Pepsi', forbiddenWords: ['Soda', 'Drink', 'Blue'] },
+  { category: 'global', targetWord: 'McDonald\'s', forbiddenWords: ['Burger', 'Fries', 'Big Mac'] },
+  { category: 'global', targetWord: 'KFC', forbiddenWords: ['Chicken', 'Fried', 'Colonel'] },
+  { category: 'global', targetWord: 'Dominos', forbiddenWords: ['Pizza', 'Delivery', 'Cheese'] },
+  { category: 'global', targetWord: 'Indomie', forbiddenWords: ['Noodles', 'Instant', 'Hungry'] },
+  { category: 'global', targetWord: 'Nike', forbiddenWords: ['Just Do It', 'Shoes', 'Swoosh'] },
+  { category: 'global', targetWord: 'Adidas', forbiddenWords: ['Stripes', 'Shoes', 'Sport'] },
+  { category: 'global', targetWord: 'Gucci', forbiddenWords: ['Fashion', 'Luxury', 'Italy'] },
+  { category: 'global', targetWord: 'Louis Vuitton', forbiddenWords: ['LV', 'Bag', 'Luxury'] },
+  { category: 'global', targetWord: 'Rolex', forbiddenWords: ['Watch', 'Expensive', 'Time'] },
+  { category: 'global', targetWord: 'Toyota', forbiddenWords: ['Car', 'Corolla', 'Camry'] },
+  { category: 'global', targetWord: 'Mercedes Benz', forbiddenWords: ['Car', 'Luxury', 'German'] },
+  { category: 'global', targetWord: 'Range Rover', forbiddenWords: ['Car', 'SUV', 'Luxury'] },
+  { category: 'global', targetWord: 'BMW', forbiddenWords: ['Car', 'German', 'Speed'] },
+  { category: 'global', targetWord: 'Lexus', forbiddenWords: ['Car', 'Toyota', 'Luxury'] },
+
+  { category: 'global', targetWord: 'Bible', forbiddenWords: ['Book', 'Christian', 'God'] },
+  { category: 'global', targetWord: 'Quran', forbiddenWords: ['Book', 'Muslim', 'Allah'] },
+  { category: 'global', targetWord: 'Church', forbiddenWords: ['Sunday', 'Pray', 'Building'] },
+  { category: 'global', targetWord: 'Mosque', forbiddenWords: ['Friday', 'Pray', 'Building'] },
+  { category: 'global', targetWord: 'Wedding', forbiddenWords: ['Bride', 'Groom', 'Ring'] },
+  { category: 'global', targetWord: 'Birthday', forbiddenWords: ['Cake', 'Year', 'Party'] },
+  { category: 'global', targetWord: 'Valentine', forbiddenWords: ['Love', 'Red', 'February'] },
+  { category: 'global', targetWord: 'Christmas', forbiddenWords: ['December', 'Jesus', 'Santa'] },
+  { category: 'global', targetWord: 'School', forbiddenWords: ['Study', 'Teacher', 'Class'] },
+  { category: 'global', targetWord: 'Exam', forbiddenWords: ['Test', 'Write', 'Pass'] },
+  { category: 'global', targetWord: 'University', forbiddenWords: ['Degree', 'School', 'Campus'] },
+  { category: 'global', targetWord: 'Doctor', forbiddenWords: ['Hospital', 'Medicine', 'Sick'] },
+  { category: 'global', targetWord: 'Lawyer', forbiddenWords: ['Court', 'Judge', 'Case'] },
+  { category: 'global', targetWord: 'Police', forbiddenWords: ['Arrest', 'Uniform', 'Station'] },
+  { category: 'global', targetWord: 'Visa', forbiddenWords: ['Passport', 'Travel', 'Embassy'] },
+  { category: 'global', targetWord: 'Passport', forbiddenWords: ['Travel', 'Book', 'ID'] },
+  { category: 'global', targetWord: 'Airport', forbiddenWords: ['Plane', 'Travel', 'Fly'] },
+  { category: 'global', targetWord: 'Lagos', forbiddenWords: ['City', 'Nigeria', 'Traffic'] },
+  { category: 'global', targetWord: 'London', forbiddenWords: ['UK', 'England', 'Queen'] },
+  { category: 'global', targetWord: 'Dubai', forbiddenWords: ['UAE', 'Travel', 'Shopping'] },
+  { category: 'global', targetWord: 'New York', forbiddenWords: ['USA', 'City', 'America'] },
+  { category: 'global', targetWord: 'Canada', forbiddenWords: ['Country', 'Cold', 'Japa'] },
+  { category: 'global', targetWord: 'China', forbiddenWords: ['Country', 'Asia', 'Goods'] },
+  
+  { category: 'global', targetWord: 'Rice', forbiddenWords: ['Food', 'White', 'Grain'] },
+  { category: 'global', targetWord: 'Beans', forbiddenWords: ['Food', 'Protein', 'Eat'] },
+  { category: 'global', targetWord: 'Chicken', forbiddenWords: ['Bird', 'Meat', 'Food'] },
+  { category: 'global', targetWord: 'Fish', forbiddenWords: ['Water', 'Swim', 'Food'] },
+  { category: 'global', targetWord: 'Water', forbiddenWords: ['Drink', 'Liquid', 'Thirsty'] },
+  { category: 'global', targetWord: 'Bread', forbiddenWords: ['Food', 'Loaf', 'Flour'] },
+  { category: 'global', targetWord: 'Egg', forbiddenWords: ['Chicken', 'Fry', 'Boil'] },
+  { category: 'global', targetWord: 'Money', forbiddenWords: ['Cash', 'Spend', 'Buy'] },
+  { category: 'global', targetWord: 'Dollar', forbiddenWords: ['Money', 'USA', 'Currency'] }
+];
+
+        // --- STATE ---
+        let gameState = 'WELCOME';
+        let roundScore = 0;
+        let timeLeft = ROUND_DURATION;
+        let countdownTime = COUNTDOWN_DURATION;
+        let timerInterval = null;
+        let countdownInterval = null;
+        let shuffledCards = [];
+        let currentCardIndex = 0;
+        let numberOfTeams = 0;
+        let teams = [];
+        const teamColors = ['var(--team1-color)', 'var(--team2-color)', 'var(--team3-color)', 'var(--team4-color)'];
+        let currentTeamIndex = 0;
+        let totalRoundsCompleted = 0;
+        const MAX_ROUNDS_PER_TEAM = 3;
+        let selectedDecks = new Set(['naija']);
+        let roundCards = [];
+
+        // --- DOM ELEMENTS ---
+        const screens = { welcome: document.getElementById('welcome-screen'), teamSelection: document.getElementById('team-selection-screen'), game: document.getElementById('game-screen'), roundOver: document.getElementById('round-over-screen'), gameOver: document.getElementById('game-over-screen'), getReady: document.getElementById('get-ready-screen'), review: document.getElementById('review-screen') };
+        const buttons = { playNow: document.getElementById('play-now-btn'), pass: document.getElementById('pass-btn'), correct: document.getElementById('correct-btn'), nextRound: document.getElementById('next-round-btn'), newGame: document.getElementById('new-game-btn'), teamCount: document.querySelectorAll('.team-count-btn'), playAgain: document.getElementById('play-again-btn'), skipCountdown: document.getElementById('skip-countdown-btn'), sound: document.getElementById('sound-btn'), deckOptions: document.querySelectorAll('.deck-option') };
+        const displays = { score: document.getElementById('score'), timer: document.getElementById('timer'), targetWord: document.getElementById('target-word'), forbiddenWordsList: document.getElementById('forbidden-words-list'), gameCard: document.getElementById('game-card'), currentTeamIndicator: document.getElementById('current-team-indicator'), scoreboard: document.getElementById('scoreboard'), winnerTeamName: document.getElementById('winner-team-name'), winnerTeamScore: document.getElementById('winner-team-score'), winnerDisplay: document.getElementById('winner-display'), finalWinnerTeamName: document.getElementById('final-winner-team-name'), finalWinnerTeamScore: document.getElementById('final-winner-team-score'), finalScoreboard: document.getElementById('final-scoreboard'), countdownNumber: document.getElementById('countdown-number'), countdownMessage: document.getElementById('countdown-message'), };
+
+        // --- AUDIO MANAGER ---
+        const SoundManager = {
+          ctx: null,
+          enabled: true,
+          sounds: {
+              correct: new Audio('correct.mp3'),
+              timeup: new Audio('timeup.mp3')
+          },
+          init() {
+            if (!this.ctx) {
+              const AudioContext = window.AudioContext || window.webkitAudioContext;
+              this.ctx = new AudioContext();
+            }
+            if (this.ctx.state === 'suspended') {
+              this.ctx.resume();
+            }
+            // Preload sounds
+            this.sounds.correct.load();
+            this.sounds.timeup.load();
+          },
+          toggle() {
+            this.enabled = !this.enabled;
+            buttons.sound.textContent = this.enabled ? '🔊' : '🔇';
+            if (this.enabled) this.init();
+          },
+          playTone(freq, duration, type = 'sine') {
+            if (!this.enabled || !this.ctx) return;
+            try {
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = type;
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.1, this.ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+                osc.start();
+                osc.stop(this.ctx.currentTime + duration);
+            } catch(e) { console.error("Audio Error:", e); }
+          },
+          playSound(name) {
+              if (!this.enabled) return;
+              const sound = this.sounds[name];
+              if (sound) {
+                  sound.currentTime = 0;
+                  sound.play().catch(e => {
+                      console.log("Audio play failed, falling back to beep:", e);
+                      // Fallback logic
+                      if (name === 'correct') this.playTone(600, 0.1, 'sine');
+                      if (name === 'timeup') this.playTone(80, 1.0, 'sawtooth');
+                  });
+              }
+          },
+          countdownBeep() { this.playTone(600, 0.1, 'sine'); },
+          goBeep() { this.playTone(800, 0.3, 'square'); },
+          playCorrect() { this.playSound('correct'); },
+          playTimeUp() { this.playSound('timeup'); }
+        };
+
+        // --- ANIMATION HELPER ---
+        const animateElement = (element, animation, duration) => {
+          if (!element) return;
+          element.classList.add('animated', animation);
+          if (duration) {
+              element.style.animationDuration = `${duration}ms`;
+          }
+
+          function handleAnimationEnd(event) {
+            if (event.target !== element) return;
+            element.classList.remove('animated', animation);
+            element.style.removeProperty('animation-duration');
+            element.removeEventListener('animationend', handleAnimationEnd);
+          }
+          element.addEventListener('animationend', handleAnimationEnd);
+        };
+
+        // --- GAME LOGIC ---
+        const shuffleArray = (array) => { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; };
+        
+        const renderScreen = () => { Object.values(screens).forEach(screen => screen.classList.remove('active')); if (gameState === 'WELCOME') screens.welcome.classList.add('active'); if (gameState === 'TEAM_SELECTION') screens.teamSelection.classList.add('active'); if (gameState === 'GET_READY') screens.getReady.classList.add('active'); if (gameState === 'PLAYING') screens.game.classList.add('active'); if (gameState === 'REVIEW') screens.review.classList.add('active'); if (gameState === 'ROUND_OVER') screens.roundOver.classList.add('active'); if (gameState === 'GAME_OVER') screens.gameOver.classList.add('active'); };
+
+        const updateCard = () => {
+          const card = shuffledCards[currentCardIndex];
+          if (!card) { endRound(); return; }
+          
+          displays.targetWord.innerHTML = '';
+          displays.forbiddenWordsList.innerHTML = '';
+          
+          displays.targetWord.textContent = card.targetWord;
+          card.forbiddenWords.forEach(word => { const li = document.createElement('li'); li.className = 'forbidden-word'; li.textContent = word; displays.forbiddenWordsList.appendChild(li); });
+          
+          Splitting({ target: displays.targetWord, by: 'chars' });
+          Splitting({ target: displays.targetWord, by: 'chars' });
+          animateElement(displays.gameCard, 'fadeInUp', 400);
+        };
+        
+        const showReviewScreen = () => {
+             gameState = 'REVIEW';
+             renderScreen();
+             const list = document.getElementById('review-list');
+             list.innerHTML = '';
+             roundCards.forEach((item, index) => {
+                 const li = document.createElement('li');
+                 li.className = 'review-item';
+                 li.innerHTML = `
+                   <span class="review-word">${item.word}</span>
+                   <button class="status-btn ${item.status === 'correct' ? 'correct' : 'pass'}" onclick="toggleCardStatus(${index})">
+                     ${item.status === 'correct' ? 'Correct' : 'Pass'}
+                   </button>
+                 `;
+                 list.appendChild(li);
+             });
+             updateReviewScore();
+        };
+
+        window.toggleCardStatus = (index) => {
+             const item = roundCards[index];
+             item.status = item.status === 'correct' ? 'skipped' : 'correct';
+             showReviewScreen(); // Re-render to update UI
+        };
+
+        const updateReviewScore = () => {
+             roundScore = roundCards.filter(c => c.status === 'correct').length;
+             document.getElementById('review-score').textContent = roundScore;
+        };
+
+        const nextCard = () => { currentCardIndex++; if (currentCardIndex >= shuffledCards.length) { shuffledCards = shuffleArray([...gameCards]); currentCardIndex = 0; } updateCard(); };
+
+
+
+        const updateTimer = () => { 
+           if (isPaused) return; // double check
+           timeLeft--; 
+           displays.timer.textContent = timeLeft; 
+           displays.timer.classList.toggle('low-time', timeLeft <= 10); 
+           if (timeLeft <= 0) { 
+              SoundManager.playTimeUp();
+              showReviewScreen(); 
+           } else if (timeLeft <= 5) {
+              // Optional critical ticking sound for last 5 seconds?
+              // SoundManager.countdownBeep(); 
+           }
+         };
+
+        // --- PAUSE LOGIC ---
+        let isPaused = false;
+        const pauseOverlay = document.getElementById('pause-overlay');
+        
+        const togglePause = () => {
+            if (gameState !== 'PLAYING') return;
+            
+            isPaused = !isPaused;
+            if (isPaused) {
+                clearInterval(timerInterval);
+                pauseOverlay.style.display = 'flex';
+            } else {
+                pauseOverlay.style.display = 'none';
+                timerInterval = setInterval(updateTimer, 1000);
+            }
+        };
+
+        const updateScoreboard = () => {
+          displays.scoreboard.innerHTML = '';
+          teams.sort((a, b) => b.score - a.score); 
+          
+          // Update winner display with leading team
+          const leadingTeam = teams[0];
+          displays.winnerTeamName.textContent = leadingTeam.name;
+          displays.winnerTeamScore.textContent = `${leadingTeam.score} points`;
+          displays.winnerDisplay.style.background = `linear-gradient(135deg, ${leadingTeam.color}, var(--yellow-300))`;
+          
+          teams.forEach(team => {
+            const item = document.createElement('div');
+            item.className = 'scoreboard-item';
+            item.style.backgroundColor = team.color;
+            item.innerHTML = `<span class="team-name">${team.name}</span><span class="team-score">${team.score}</span>`;
+            displays.scoreboard.appendChild(item);
+          });
+        };
+
+        const startCountdown = () => {
+          gameState = 'GET_READY';
+          countdownTime = COUNTDOWN_DURATION;
+          const currentTeam = teams[currentTeamIndex];
+          displays.countdownMessage.textContent = `${currentTeam.name}, Get Ready!`;
+          displays.countdownNumber.textContent = countdownTime;
+          renderScreen();
+          
+          clearInterval(countdownInterval);
+          SoundManager.countdownBeep(); // Beep for the initial number
+          countdownInterval = setInterval(() => {
+            countdownTime--;
+            displays.countdownNumber.textContent = countdownTime;
+            if (countdownTime > 0) {
+                 SoundManager.countdownBeep();
+            }
+            if (countdownTime <= 0) {
+              clearInterval(countdownInterval);
+              SoundManager.goBeep();
+              startRound();
+            }
+          }, 1000);
+        };
+        
+        const skipCountdown = () => {
+          clearInterval(countdownInterval);
+          startRound();
+        };
+
+        const startRound = () => {
+          gameState = 'PLAYING';
+          isPaused = false; 
+          pauseOverlay.style.display = 'none';
+          roundCards = [];
+          roundScore = 0;
+          timeLeft = ROUND_DURATION;
+          displays.score.textContent = roundScore;
+          displays.timer.textContent = timeLeft;
+          displays.timer.classList.remove('low-time');
+          const currentTeam = teams[currentTeamIndex];
+          displays.currentTeamIndicator.textContent = `${currentTeam.name}'s Turn`;
+          displays.currentTeamIndicator.style.backgroundColor = currentTeam.color;
+          renderScreen();
+          updateCard();
+          clearInterval(timerInterval);
+          timerInterval = setInterval(updateTimer, 1000);
+        };
+        
+        const setupAndStartGame = (teamCount) => {
+          numberOfTeams = teamCount;
+          teams = [];
+          for (let i = 0; i < numberOfTeams; i++) {
+            teams.push({ name: `Team ${i + 1}`, score: 0, color: teamColors[i] });
+          }
+          currentTeamIndex = 0;
+          totalRoundsCompleted = 0;
+          currentTeamIndex = 0;
+          totalRoundsCompleted = 0;
+          
+          // Filter cards based on selected decks
+          const activeCards = gameCards.filter(card => {
+             const category = card.category || 'naija'; // Default to 'naija' for existing cards
+             return selectedDecks.has(category);
+          });
+          
+          if (activeCards.length === 0) {
+              alert("Please select at least one deck!");
+              return;
+          }
+
+          shuffledCards = shuffleArray([...activeCards]);
+          currentCardIndex = 0;
+          startCountdown();
+        };
+
+        const endRound = () => {
+          clearInterval(timerInterval);
+          teams[currentTeamIndex].score += roundScore;
+          currentTeamIndex = (currentTeamIndex + 1) % numberOfTeams;
+          totalRoundsCompleted++;
+          
+          // Check if all teams have completed 3 rounds
+          if (totalRoundsCompleted >= numberOfTeams * MAX_ROUNDS_PER_TEAM) {
+            showFinalWinner();
+            return;
+          }
+          
+          gameState = 'ROUND_OVER';
+          updateScoreboard();
+          const nextTeamName = teams[currentTeamIndex].name;
+          const roundsLeft = MAX_ROUNDS_PER_TEAM - Math.floor(totalRoundsCompleted / numberOfTeams);
+          buttons.nextRound.textContent = `Start ${nextTeamName}'s Turn (Round ${Math.floor(totalRoundsCompleted / numberOfTeams) + 1}/${MAX_ROUNDS_PER_TEAM})`;
+          renderScreen();
+          animateElement(document.querySelector('#round-over-screen > .title-screen'), 'fadeIn', 800);
+        };
+
+        const showFinalWinner = () => {
+          gameState = 'GAME_OVER';
+          teams.sort((a, b) => b.score - a.score);
+          const champion = teams[0];
+          
+          // Update final winner display
+          displays.finalWinnerTeamName.textContent = champion.name;
+          displays.finalWinnerTeamScore.textContent = `${champion.score} Total Points`;
+          
+          // Update final scoreboard
+          displays.finalScoreboard.innerHTML = '';
+          teams.forEach((team, index) => {
+            const item = document.createElement('div');
+            item.className = 'scoreboard-item';
+            item.style.backgroundColor = team.color;
+            const position = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`;
+            item.innerHTML = `<span class="team-name">${position} ${team.name}</span><span class="team-score">${team.score}</span>`;
+            displays.finalScoreboard.appendChild(item);
+          });
+          
+          renderScreen();
+          animateElement(document.querySelector('#game-over-screen > .title-screen'), 'fadeIn', 800);
+        };
+
+        const resetGame = () => {
+          clearInterval(timerInterval);
+          clearInterval(countdownInterval);
+          gameState = 'TEAM_SELECTION';
+          totalRoundsCompleted = 0;
+          renderScreen();
+        };
+
+        const quitGame = () => {
+          if (confirm('Are you sure you want to quit? Your progress will be lost.')) {
+            clearInterval(timerInterval);
+            clearInterval(countdownInterval);
+            isPaused = false;
+            pauseOverlay.style.display = 'none';
+            gameState = 'WELCOME';
+            totalRoundsCompleted = 0;
+            currentCardIndex = 0;
+            roundScore = 0;
+            renderScreen();
+          }
+        };
+
+        const showTeamSelection = () => {
+             SoundManager.init(); // Initialize audio context on user gesture
+             gameState = 'TEAM_SELECTION';
+             renderScreen();
+             animateElement(document.querySelector('#team-selection-screen > .title-screen'), 'fadeIn', 800);
+        };
+
+        const toggleDeck = (element) => {
+            const deck = element.dataset.deck;
+            if (selectedDecks.has(deck)) {
+                if (selectedDecks.size > 1) { // Prevent deselecting the last deck
+                    selectedDecks.delete(deck);
+                    element.classList.remove('selected');
+                }
+            } else {
+                selectedDecks.add(deck);
+                element.classList.add('selected');
+            }
+        };
+
+        const handleCorrect = () => { 
+            roundCards.push({ word: displays.targetWord.textContent, status: 'correct' });
+            roundScore++; displays.score.textContent = roundScore; animateElement(displays.score, 'tada', 800); 
+            SoundManager.playCorrect();
+            nextCard(); 
+        };
+        const handlePass = () => { 
+            roundCards.push({ word: displays.targetWord.textContent, status: 'skipped' });
+            nextCard(); 
+        };
+
+        // --- EVENT LISTENERS ---
+        const actions = {
+          'play-now-btn': showTeamSelection, 'next-round-btn': startCountdown,
+          'new-game-btn': resetGame, 'play-again-btn': resetGame,
+          'skip-countdown-btn': skipCountdown, 'correct-btn': handleCorrect,
+          'pass-btn': handlePass, 'sound-btn': () => SoundManager.toggle(),
+          'confirm-score-btn': endRound,
+          'pause-btn': togglePause, 'resume-btn': togglePause,
+          'quit-game-btn': quitGame, 'quit-pause-btn': quitGame
+        };
+        Object.entries(actions).forEach(([id, fn]) => document.getElementById(id)?.addEventListener('click', fn));
+
+        buttons.teamCount.forEach(b => b.addEventListener('click', (e) => setupAndStartGame(parseInt(e.target.dataset.teams))));
+        buttons.deckOptions.forEach(o => o.addEventListener('click', (e) => toggleDeck(e.currentTarget)));
+        
+        // Timer Selection Logic
+        document.querySelectorAll('.timer-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.timer-btn').forEach(b => b.classList.remove('selected'));
+                e.target.classList.add('selected');
+                ROUND_DURATION = parseInt(e.target.dataset.time);
+            });
+        });
+        
+        // --- INITIAL RENDER ---
+        renderScreen();
+        animateElement(document.querySelector('#welcome-screen > .title-screen'), 'fadeIn', 800);
+      });
+    </script>
+    <script>
+      // PWA & Service Worker
+      if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(console.log);
+
+      // Install Prompt Logic
+      let deferredPrompt;
+      const [prompt, installBtn, closeBtn] = ['install-prompt', 'install-btn', 'close-install-btn'].map(id => document.getElementById(id));
+
+      window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; prompt.classList.add('visible'); });
+      
+      installBtn.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        if ((await deferredPrompt.userChoice).outcome === 'accepted') deferredPrompt = null;
+        prompt.classList.remove('visible');
+      });
+      closeBtn.addEventListener('click', () => prompt.classList.remove('visible'));
+    </script>
+  </body>
+</html>
